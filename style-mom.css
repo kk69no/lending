@@ -47,8 +47,7 @@
 .mode-dad .mom-content { display: none !important; }
 .mode-mom .dad-content { display: none !important; }
 
-/* ========== МАМ ВЕРСИЯ — всё как у пап ========== */
-/* Кнопки для мам — такие же как у пап */
+/* ========== КНОПКИ ДЛЯ МАМ — точно как у пап ========== */
 .btn-mom-primary {
     display: inline-flex;
     align-items: center;
@@ -62,12 +61,12 @@
     cursor: pointer;
     font-size: 0.95rem;
     gap: 8px;
-    background: var(--primary);
+    background: #046b4e;
     color: white;
 }
 
 .btn-mom-primary:hover {
-    background: var(--primary-dark);
+    background: #035c42;
     transform: translateY(-2px);
 }
 
@@ -84,12 +83,12 @@
     font-size: 0.95rem;
     gap: 8px;
     background: transparent;
-    color: var(--primary);
-    border: 1.5px solid var(--primary);
+    color: #046b4e;
+    border: 1.5px solid #046b4e;
 }
 
 .btn-mom-outline:hover {
-    background: var(--primary-light);
+    background: #e0f4ee;
 }
 
 .btn-mom-cta {
@@ -105,7 +104,7 @@
     font-size: 1rem;
     gap: 8px;
     background: white;
-    color: var(--primary);
+    color: #046b4e;
     border: none;
 }
 
