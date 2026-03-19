@@ -92,9 +92,26 @@
     padding: 0;
 }
 
-/* ========== МАМ-ВЕРСИЯ: BADGE — убрать ========== */
-.mode-mom .badge {
-    display: none;
+/* ========== МАМ HERO — только фон и кнопки ========== */
+.mode-mom .hero-content .badge,
+.mode-mom .hero-content h1,
+.mode-mom .hero-content .hero-subtitle,
+.mode-mom .hero-content .hero-description,
+.mode-mom .hero-content .hero-features,
+.mode-mom .hero-content .hero-markers {
+    display: none !important;
+}
+
+.mode-mom .hero-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    min-height: calc(100vh - 200px);
+    padding-bottom: 60px;
+}
+
+.mode-mom .hero-buttons.mom-content {
+    display: flex !important;
 }
 
 /* ========== МАМ-ВЕРСИЯ: ЗАГОЛОВОК ========== */
