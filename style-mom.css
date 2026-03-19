@@ -47,6 +47,26 @@
 .mode-dad .mom-content { display: none !important; }
 .mode-mom .dad-content { display: none !important; }
 
+/* ========== МАМ HERO — фото фон ========== */
+.mode-mom .hero {
+    position: relative;
+    background: none;
+    backdrop-filter: none;
+}
+
+.mode-mom .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('bg-mom.jpg') center/cover no-repeat;
+    z-index: 0;
+}
+
+.mode-mom .hero .container {
+    position: relative;
+    z-index: 2;
+}
+
 /* ========== КНОПКИ ДЛЯ МАМ — точно как у пап ========== */
 .btn-mom-primary {
     display: inline-flex;
