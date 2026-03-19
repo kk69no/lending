@@ -47,19 +47,23 @@
 .mode-dad .mom-content { display: none !important; }
 .mode-mom .dad-content { display: none !important; }
 
-/* ========== МАМ HERO — фото фон ========== */
+/* ========== МАМ ВЕРСИЯ: фон на весь сайт fixed ========== */
+.mode-mom body {
+    background-image: url('bg-mom.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f0ebe3;
+}
+
+/* ========== МАМ HERO — убираем отдельный фон, используем body ========== */
 .mode-mom .hero {
-    position: relative;
-    background: none;
+    background: rgba(254, 251, 247, 0.45);
     backdrop-filter: none;
 }
 
 .mode-mom .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('bg-mom.jpg') center/cover no-repeat;
-    z-index: 0;
+    display: none;
 }
 
 .mode-mom .hero .container {
@@ -77,6 +81,25 @@
     border: 1px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
     max-width: 700px;
+}
+
+/* ========== МАМ СЕКЦИИ — полупрозрачные поверх фона ========== */
+.mode-mom .section {
+    background: rgba(254, 251, 247, 0.82);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.mode-mom .navbar {
+    background: rgba(254, 251, 247, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.mode-mom footer {
+    background: rgba(254, 251, 247, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 /* ========== КНОПКИ ДЛЯ МАМ — точно как у пап ========== */
