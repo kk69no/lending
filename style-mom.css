@@ -63,7 +63,11 @@ body.mode-mom .hero-content {
 /* ========== MOM SECTIONS ========== */
 body.mode-mom .section {
     background: transparent;
-    border-top-color: rgba(180, 165, 140, 0.2) !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    margin: 0;
+    border-top: 1px solid rgba(180, 165, 140, 0.2) !important;
     position: relative;
 }
 body.mode-mom .section::before {
@@ -121,7 +125,8 @@ body.mode-mom footer {
     background: rgba(245, 240, 232, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-top-color: rgba(180, 165, 140, 0.2);
+    border-radius: 0;
+    border-top: 1px solid rgba(180, 165, 140, 0.2);
 }
 
 /* ========== MOM NAVBAR transparent start ========== */
@@ -178,16 +183,22 @@ body.mode-mom .faq-icon::after {
 }
 
 /* ========== MOM TYPOGRAPHY tweaks ========== */
-body.mode-mom h1 { color: #4a3f32; }
-body.mode-mom .section-header h2 { color: #4a3f32; }
-body.mode-mom .principle-card h3 { color: #4a3f32; }
-body.mode-mom .schedule-card h3 { color: #4a3f32; }
-body.mode-mom .value-card h3 { color: #4a3f32; }
+body.mode-mom h1 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .hero-subtitle { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; }
+body.mode-mom .logo { font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .section-header h2 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .principle-card h3 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .schedule-card h3 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .value-card h3 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .cta-card h2 { font-family: 'Cormorant Garamond', Georgia, serif; }
 body.mode-mom .story-emphasis {
     color: #8b7355;
     border-left-color: #c9a96e;
+    font-family: 'Cormorant Garamond', Georgia, serif;
 }
+body.mode-mom .schedule-price { font-family: 'Cormorant Garamond', Georgia, serif; }
 body.mode-mom .highlight { color: #8b7355; }
+body.mode-mom .hero-description { font-family: 'Manrope', sans-serif; font-weight: 300; }
 
 /* ========== MOM value icon ========== */
 body.mode-mom .value-icon {
