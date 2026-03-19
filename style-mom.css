@@ -50,8 +50,8 @@
 /* ========== ПЛАШКА ЗА ТЕКСТОМ HERO ========== */
 .mode-mom .hero-content {
     background: rgba(250, 244, 234, 0.72);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 28px;
     padding: 48px 52px;
     border: 1px solid rgba(212, 169, 106, 0.25);
