@@ -129,13 +129,13 @@
 /* ========== МАМ-ВЕРСИЯ: ЛОГОТИП И ЗАГОЛОВКИ ========== */
 .mode-mom .logo {
     color: #7a5c2e;
-    font-family: 'Playfair Display', serif;
+    
     -webkit-text-fill-color: #7a5c2e;
     background: none;
 }
 
 .mode-mom h1 {
-    font-family: 'Playfair Display', serif;
+    
     color: #4a3420;
     background: none;
     -webkit-text-fill-color: #4a3420;
@@ -143,13 +143,13 @@
 
 .mode-mom .hero-subtitle {
     color: #8c6d3f;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    
+    
     font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
 
 .mode-mom .section-header h2 {
-    font-family: 'Playfair Display', serif;
+    
     color: #4a3420;
 }
 
