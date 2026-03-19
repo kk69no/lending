@@ -70,28 +70,48 @@
     position: absolute;
     inset: 0;
     background:
-        url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop')
+        url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?q=80&w=2070&auto=format&fit=crop')
         center/cover no-repeat;
     z-index: 0;
 }
 
-/* Лёгкий бежевый оверлей — почти нет прозрачности, фото видно */
+/* Оверлей убран полностью */
 .mode-mom .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(247, 242, 235, 0.82) 0%,
-        rgba(247, 242, 235, 0.55) 60%,
-        rgba(247, 242, 235, 0.25) 100%
-    );
-    z-index: 1;
+    display: none;
 }
 
 .mode-mom .hero .container {
     position: relative;
     z-index: 2;
+}
+
+/* Чёрный текст в hero для мам */
+.mode-mom h1 {
+    color: #111 !important;
+    -webkit-text-fill-color: #111 !important;
+    background: none !important;
+}
+
+.mode-mom .hero-subtitle {
+    color: #222 !important;
+}
+
+.mode-mom .hero-description {
+    color: #333 !important;
+}
+
+.mode-mom .hero-markers .marker {
+    color: #333 !important;
+}
+
+.mode-mom .feature {
+    color: #222 !important;
+}
+
+.mode-mom .badge {
+    background: rgba(255,255,255,0.7);
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 /* ========== МАМ-ВЕРСИЯ: NAVBAR ========== */
