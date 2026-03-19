@@ -56,9 +56,9 @@
     background-color: #f0ebe3;
 }
 
-/* ========== МАМ HERO — убираем отдельный фон, используем body ========== */
+/* ========== МАМ HERO ========== */
 .mode-mom .hero {
-    background: rgba(254, 251, 247, 0.45);
+    background: transparent;
     backdrop-filter: none;
 }
 
@@ -83,23 +83,72 @@
     max-width: 700px;
 }
 
-/* ========== МАМ СЕКЦИИ — полупрозрачные поверх фона ========== */
-.mode-mom .section {
-    background: rgba(254, 251, 247, 0.82);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-}
-
+/* ========== МАМ NAVBAR ========== */
 .mode-mom .navbar {
-    background: rgba(254, 251, 247, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(250, 246, 240, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(200, 185, 160, 0.2);
 }
 
+/* ========== МАМ СЕКЦИИ — убираем закруглённые плавающие карточки ========== */
+.mode-mom .section {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    margin: 0;
+    border-top: 1px solid rgba(200, 185, 160, 0.25);
+    position: relative;
+}
+
+/* Тонкий полупрозрачный слой поверх фото для читаемости */
+.mode-mom .section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(250, 246, 239, 0.78);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+.mode-mom .section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========== МАМ КАРТОЧКИ — стеклянные белые ========== */
+.mode-mom .story-card,
+.mode-mom .schedule-card,
+.mode-mom .principle-card,
+.mode-mom .value-card,
+.mode-mom .faq-item,
+.mode-mom .value-footer,
+.mode-mom .practice-box {
+    background: rgba(255, 253, 249, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 24px rgba(160, 130, 80, 0.08);
+}
+
+/* ========== МАМ FOOTER ========== */
 .mode-mom footer {
-    background: rgba(254, 251, 247, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(245, 240, 232, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 0;
+    border-top: 1px solid rgba(200, 185, 160, 0.25);
+}
+
+/* ========== МАМ CTA СЕКЦИЯ ========== */
+.mode-mom .cta-section {
+    border-top: 1px solid rgba(200, 185, 160, 0.25);
+}
+
+.mode-mom .cta-section::before {
+    background: rgba(240, 235, 225, 0.6);
 }
 
 /* ========== КНОПКИ ДЛЯ МАМ — точно как у пап ========== */
