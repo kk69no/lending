@@ -1,218 +1,208 @@
-/* ========== ПЕРЕКЛЮЧАТЕЛЬ ========== */
+/* ========== MODE SWITCHER ========== */
 .mode-switcher {
     position: fixed;
-    bottom: 28px;
-    right: 28px;
+    bottom: 24px; right: 24px;
     z-index: 999;
-    display: flex;
-    gap: 8px;
-    background: rgba(255,255,255,0.95);
-    padding: 6px;
+    display: flex; gap: 4px;
+    background: rgba(255,255,255,0.92);
+    padding: 5px;
     border-radius: 50px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.6);
 }
-
 .mode-btn {
-    padding: 10px 20px;
+    padding: 9px 18px;
     border-radius: 50px;
     border: none;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #888;
+    display: flex; align-items: center; gap: 6px;
+    color: #999;
     background: transparent;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.01em;
 }
+.mode-btn-dad.active { background: var(--primary, #3a5a40); color: white; }
+.mode-btn-mom.active { background: #8b7355; color: white; }
+.mode-btn:hover:not(.active) { background: #f0ede8; color: #666; }
 
-.mode-btn-dad.active {
-    background: #046b4e;
-    color: white;
-}
-
-.mode-btn-mom.active {
-    background: #046b4e;
-    color: white;
-}
-
-.mode-btn:hover:not(.active) {
-    background: #f0f0f0;
-}
-
-/* ========== СКРЫТИЕ/ПОКАЗ КОНТЕНТА ========== */
-.mode-dad .mom-content { display: none !important; }
-.mode-mom .dad-content { display: none !important; }
-
-/* ========== МАМ ВЕРСИЯ: фон на весь сайт fixed ========== */
-.mode-mom body {
-    background-image: url('bg-mom2.jpg');
+/* ========== MOM MODE: BACKGROUND ========== */
+body.mode-mom {
+    background-image: url('bg-mom3.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #f0ebe3;
+    background-color: #efe9e0;
 }
 
-/* ========== МАМ HERO ========== */
-.mode-mom .hero {
+/* ========== MOM NAVBAR ========== */
+body.mode-mom .navbar.scrolled {
+    background: rgba(245, 240, 233, 0.88);
+    border-bottom-color: rgba(180, 165, 140, 0.2);
+}
+
+/* ========== MOM HERO ========== */
+body.mode-mom .hero {
     background: transparent;
-    backdrop-filter: none;
 }
-
-.mode-mom .hero::before {
-    display: none;
-}
-
-.mode-mom .hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* ========== МАМ HERO — стеклянная плашка ========== */
-.mode-mom .hero-content {
-    background: rgba(255, 252, 248, 0.55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+body.mode-mom .hero::before { display: none; }
+body.mode-mom .hero-content {
+    background: rgba(255, 252, 247, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 24px;
     padding: 48px 52px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
-    max-width: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* ========== МАМ NAVBAR ========== */
-.mode-mom .navbar {
-    background: rgba(250, 246, 240, 0.92);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(200, 185, 160, 0.2);
-}
-
-/* ========== МАМ СЕКЦИИ — убираем закруглённые плавающие карточки ========== */
-.mode-mom .section {
+/* ========== MOM SECTIONS ========== */
+body.mode-mom .section {
     background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-radius: 0;
-    margin: 0;
-    border-top: 1px solid rgba(200, 185, 160, 0.25);
+    border-top-color: rgba(180, 165, 140, 0.2) !important;
     position: relative;
 }
-
-/* Тонкий полупрозрачный слой поверх фото для читаемости */
-.mode-mom .section::before {
+body.mode-mom .section::before {
     content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(250, 246, 239, 0.78);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    position: absolute; inset: 0;
+    background: rgba(250, 246, 239, 0.75);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     z-index: 0;
 }
-
-.mode-mom .section .container {
-    position: relative;
-    z-index: 1;
+body.mode-mom .section > .container {
+    position: relative; z-index: 1;
 }
 
-/* ========== МАМ КАРТОЧКИ — стеклянные белые ========== */
-.mode-mom .story-card,
-.mode-mom .schedule-card,
-.mode-mom .principle-card,
-.mode-mom .value-card,
-.mode-mom .faq-item,
-.mode-mom .value-footer,
-.mode-mom .practice-box {
-    background: rgba(255, 253, 249, 0.75);
+/* ========== MOM CARDS — glass ========== */
+body.mode-mom .story-card,
+body.mode-mom .schedule-card,
+body.mode-mom .principle-card,
+body.mode-mom .value-card,
+body.mode-mom .faq-item,
+body.mode-mom .value-footer,
+body.mode-mom .practice-box {
+    background: rgba(255, 253, 249, 0.72);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 4px 24px rgba(160, 130, 80, 0.08);
+    border-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 4px 20px rgba(140, 115, 80, 0.06);
 }
 
-/* ========== МАМ FOOTER ========== */
-.mode-mom footer {
-    background: rgba(245, 240, 232, 0.92);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 0;
-    border-top: 1px solid rgba(200, 185, 160, 0.25);
+/* ========== MOM COLORS — warmer accent ========== */
+body.mode-mom .badge,
+body.mode-mom .section-badge {
+    color: #8b7355;
+}
+body.mode-mom .schedule-time {
+    background: rgba(139, 115, 85, 0.1);
+    color: #8b7355;
+}
+body.mode-mom .check-icon { color: #8b7355; }
+body.mode-mom .practice-icon { color: #8b7355; }
+body.mode-mom .marker-dot { background: #8b7355; }
+body.mode-mom .principle-number { color: rgba(139, 115, 85, 0.15); }
+
+/* ========== MOM CTA ========== */
+body.mode-mom .cta-section::before {
+    background: rgba(240, 234, 224, 0.55);
+}
+body.mode-mom .cta-card-mom {
+    background: #8b7355;
+}
+body.mode-mom .cta-card-mom h2 { color: white; }
+
+/* ========== MOM FOOTER ========== */
+body.mode-mom footer {
+    background: rgba(245, 240, 232, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top-color: rgba(180, 165, 140, 0.2);
 }
 
-/* ========== МАМ CTA СЕКЦИЯ ========== */
-.mode-mom .cta-section {
-    border-top: 1px solid rgba(200, 185, 160, 0.25);
-}
-
-.mode-mom .cta-section::before {
-    background: rgba(240, 235, 225, 0.6);
-}
-
-/* ========== КНОПКИ ДЛЯ МАМ — точно как у пап ========== */
-.btn-mom-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 28px;
-    border-radius: 40px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s;
-    border: none;
-    cursor: pointer;
-    font-size: 0.95rem;
-    gap: 8px;
-    background: #046b4e;
-    color: white;
-}
-
-.btn-mom-primary:hover {
-    background: #035c42;
-    transform: translateY(-2px);
-}
-
-.btn-mom-outline {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 28px;
-    border-radius: 40px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s;
-    cursor: pointer;
-    font-size: 0.95rem;
-    gap: 8px;
+/* ========== MOM NAVBAR transparent start ========== */
+body.mode-mom .navbar:not(.scrolled) {
     background: transparent;
-    color: #046b4e;
-    border: 1.5px solid #046b4e;
+}
+body.mode-mom .navbar:not(.scrolled) .logo {
+    color: #5a4a38;
+}
+body.mode-mom .navbar:not(.scrolled) .nav-link {
+    color: #5a4a38;
 }
 
-.btn-mom-outline:hover {
-    background: #e0f4ee;
+/* ========== MOM BUTTONS ========== */
+body.mode-mom .btn-primary {
+    background: #8b7355;
+    box-shadow: 0 4px 16px rgba(139, 115, 85, 0.2);
+}
+body.mode-mom .btn-primary:hover {
+    background: #7a6548;
+    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.25);
+}
+body.mode-mom .btn-outline {
+    color: #8b7355;
+    border-color: rgba(139, 115, 85, 0.3);
+}
+body.mode-mom .btn-outline:hover {
+    background: rgba(139, 115, 85, 0.08);
+    border-color: #8b7355;
+}
+body.mode-mom .btn-nav {
+    background: #8b7355;
+}
+body.mode-mom .btn-nav:hover {
+    background: #7a6548;
+}
+body.mode-mom .btn-cta {
+    color: #8b7355;
 }
 
-.btn-mom-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 40px;
-    border-radius: 40px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s;
-    cursor: pointer;
-    font-size: 1rem;
-    gap: 8px;
-    background: white;
-    color: #046b4e;
-    border: none;
+/* ========== MOM TAB ========== */
+body.mode-mom .tab.active {
+    background: #8b7355;
+    border-color: #8b7355;
+}
+body.mode-mom .tab:hover {
+    border-color: #8b7355;
 }
 
-.btn-mom-cta:hover {
-    background: rgba(255,255,255,0.9);
-    transform: translateY(-2px);
+/* ========== MOM FAQ icon ========== */
+body.mode-mom .faq-icon::before,
+body.mode-mom .faq-icon::after {
+    background: #8b7355;
+}
+
+/* ========== MOM TYPOGRAPHY tweaks ========== */
+body.mode-mom h1 { color: #4a3f32; }
+body.mode-mom .section-header h2 { color: #4a3f32; }
+body.mode-mom .principle-card h3 { color: #4a3f32; }
+body.mode-mom .schedule-card h3 { color: #4a3f32; }
+body.mode-mom .value-card h3 { color: #4a3f32; }
+body.mode-mom .story-emphasis {
+    color: #8b7355;
+    border-left-color: #c9a96e;
+}
+body.mode-mom .highlight { color: #8b7355; }
+
+/* ========== MOM value icon ========== */
+body.mode-mom .value-icon {
+    background: rgba(139, 115, 85, 0.1);
+}
+body.mode-mom .value-icon i { color: #8b7355; }
+
+/* ========== MOM RESPONSIVE ========== */
+@media (max-width: 768px) {
+    body.mode-mom .hero-content {
+        padding: 32px 24px;
+    }
+    body.mode-mom .nav-menu.active .nav-list {
+        background: rgba(255, 252, 247, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+    }
 }
