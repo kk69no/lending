@@ -9,7 +9,7 @@
     background: rgba(255,255,255,0.95);
     padding: 6px;
     border-radius: 50px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
     backdrop-filter: blur(10px);
 }
 
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #666;
+    color: #888;
     background: transparent;
     font-family: 'Inter', sans-serif;
 }
@@ -35,23 +35,34 @@
 }
 
 .mode-btn-mom.active {
-    background: linear-gradient(135deg, #c2185b, #e91e8c);
+    background: linear-gradient(135deg, #b5924c, #d4a96a);
     color: white;
 }
 
 .mode-btn:hover:not(.active) {
-    background: #f0f0f0;
+    background: #f5f0ea;
 }
 
 /* ========== СКРЫТИЕ/ПОКАЗ КОНТЕНТА ========== */
 .mode-dad .mom-content { display: none !important; }
 .mode-mom .dad-content { display: none !important; }
 
-/* ========== МАМ-ВЕРСИЯ: HERO ФОН ========== */
+/* ========== МАМ-ВЕРСИЯ: BODY ФОН ========== */
+.mode-mom body {
+    background-image: none;
+    background-color: #f7f2eb;
+}
+
+/* ========== МАМ-ВЕРСИЯ: HERO ========== */
 .mode-mom .hero {
-    background: none;
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    background: none;
+    backdrop-filter: none;
 }
 
 .mode-mom .hero::before {
@@ -59,19 +70,21 @@
     position: absolute;
     inset: 0;
     background:
-        url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2070&auto=format&fit=crop')
+        center/cover no-repeat;
     z-index: 0;
 }
 
+/* Лёгкий бежевый оверлей — почти нет прозрачности, фото видно */
 .mode-mom .hero::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        135deg,
-        rgba(255, 240, 245, 0.88) 0%,
-        rgba(252, 228, 236, 0.80) 50%,
-        rgba(255, 245, 250, 0.85) 100%
+        to right,
+        rgba(247, 242, 235, 0.82) 0%,
+        rgba(247, 242, 235, 0.55) 60%,
+        rgba(247, 242, 235, 0.25) 100%
     );
     z-index: 1;
 }
@@ -81,38 +94,55 @@
     z-index: 2;
 }
 
-/* ========== МАМ-ВЕРСИЯ: ТИПОГРАФИКА ========== */
+/* ========== МАМ-ВЕРСИЯ: NAVBAR ========== */
+.mode-mom .navbar {
+    background: rgba(247, 242, 235, 0.92);
+    border-bottom: 1px solid rgba(181, 146, 76, 0.15);
+}
+
+.mode-mom .btn-nav {
+    background: linear-gradient(135deg, #b5924c, #d4a96a);
+}
+
+.mode-mom .nav-link:hover { color: #b5924c; }
+
+/* ========== МАМ-ВЕРСИЯ: ЛОГОТИП И ЗАГОЛОВКИ ========== */
+.mode-mom .logo {
+    color: #7a5c2e;
+    font-family: 'Playfair Display', serif;
+    -webkit-text-fill-color: #7a5c2e;
+    background: none;
+}
+
 .mode-mom h1 {
     font-family: 'Playfair Display', serif;
-    background: linear-gradient(135deg, #880e4f, #c2185b, #e91e8c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #4a3420;
+    background: none;
+    -webkit-text-fill-color: #4a3420;
 }
 
 .mode-mom .hero-subtitle {
-    color: #ad1457;
+    color: #8c6d3f;
     font-family: 'Playfair Display', serif;
     font-style: italic;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
 }
 
-.mode-mom .logo {
-    background: linear-gradient(135deg, #880e4f, #e91e8c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.mode-mom .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    color: #4a3420;
 }
 
 /* ========== МАМ-ВЕРСИЯ: BADGE ========== */
 .mode-mom .badge {
-    background: rgba(194, 24, 91, 0.1);
-    color: #880e4f;
-    border: 1px solid rgba(194, 24, 91, 0.2);
+    background: rgba(181, 146, 76, 0.12);
+    color: #7a5c2e;
+    border: 1px solid rgba(181, 146, 76, 0.25);
 }
 
 .mode-mom .section-badge {
-    background: rgba(194, 24, 91, 0.1);
-    color: #880e4f;
+    background: rgba(181, 146, 76, 0.12);
+    color: #7a5c2e;
 }
 
 /* ========== МАМ-ВЕРСИЯ: КНОПКИ ========== */
@@ -129,14 +159,14 @@
     cursor: pointer;
     font-size: 0.95rem;
     gap: 8px;
-    background: linear-gradient(135deg, #c2185b, #e91e8c);
+    background: linear-gradient(135deg, #b5924c, #d4a96a);
     color: white;
-    box-shadow: 0 4px 20px rgba(194, 24, 91, 0.3);
+    box-shadow: 0 4px 20px rgba(181, 146, 76, 0.3);
 }
 
 .btn-mom-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(194, 24, 91, 0.4);
+    box-shadow: 0 8px 28px rgba(181, 146, 76, 0.45);
 }
 
 .btn-mom-outline {
@@ -152,12 +182,12 @@
     font-size: 0.95rem;
     gap: 8px;
     background: transparent;
-    color: #c2185b;
-    border: 2px solid #c2185b;
+    color: #8c6d3f;
+    border: 2px solid #b5924c;
 }
 
 .btn-mom-outline:hover {
-    background: rgba(194, 24, 91, 0.08);
+    background: rgba(181, 146, 76, 0.08);
 }
 
 .btn-mom-cta {
@@ -173,126 +203,82 @@
     font-size: 1rem;
     gap: 8px;
     background: white;
-    color: #c2185b;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    color: #8c6d3f;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
     border: none;
 }
 
 .btn-mom-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
 }
 
-/* ========== МАМ-ВЕРСИЯ: NAVBAR ========== */
-.mode-mom .navbar {
-    background: rgba(255, 240, 248, 0.9);
-    border-bottom: 1px solid rgba(194, 24, 91, 0.1);
-}
-
-.mode-mom .btn-nav {
-    background: linear-gradient(135deg, #c2185b, #e91e8c);
-}
-
-.mode-mom .nav-link:hover {
-    color: #c2185b;
-}
-
-/* ========== МАМ-ВЕРСИЯ: СЕКЦИИ (фон) ========== */
+/* ========== МАМ-ВЕРСИЯ: СЕКЦИИ ========== */
 .mode-mom .section {
-    background: rgba(255, 245, 250, 0.92);
+    background: rgba(250, 246, 239, 0.94);
+    backdrop-filter: blur(4px);
 }
 
-.mode-mom body {
-    background-image: url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* ========== МАМ-ВЕРСИЯ: КАРТОЧКИ ========== */
-.mode-mom .principle-icon {
-    background: rgba(194, 24, 91, 0.1);
-}
-
-.mode-mom .principle-icon i {
-    color: #c2185b;
-}
-
-.mode-mom .principle-card:hover {
-    border-color: rgba(194, 24, 91, 0.2);
+.mode-mom .story-card,
+.mode-mom .schedule-card,
+.mode-mom .principle-card,
+.mode-mom .value-card,
+.mode-mom .faq-item,
+.mode-mom .value-footer {
+    background: #fffdf9;
+    border: 1px solid rgba(181, 146, 76, 0.12);
 }
 
 .mode-mom .story-emphasis {
-    color: #880e4f;
-    border-left-color: #e91e8c;
+    color: #7a5c2e;
+    border-left-color: #d4a96a;
 }
 
 .mode-mom .practice-box {
-    background: linear-gradient(135deg, rgba(255, 240, 245, 0.9), rgba(252, 228, 236, 0.9));
+    background: linear-gradient(135deg, rgba(247, 242, 235, 0.95), rgba(255, 249, 240, 0.95));
+    border: 1px solid rgba(181, 146, 76, 0.15);
 }
 
-.mode-mom .practice-box h3 {
-    color: #880e4f;
-}
+.mode-mom .practice-box h3 { color: #7a5c2e; }
+.mode-mom .practice-item i { color: #b5924c; }
+.mode-mom .principle-icon { background: rgba(181, 146, 76, 0.1); }
+.mode-mom .principle-icon i { color: #b5924c; }
+.mode-mom .principle-card:hover { border-color: rgba(181, 146, 76, 0.25); }
+.mode-mom .schedule-time { background: rgba(181, 146, 76, 0.1); color: #7a5c2e; }
+.mode-mom .schedule-list i { color: #b5924c; }
+.mode-mom .tab.active { background: linear-gradient(135deg, #b5924c, #d4a96a); }
+.mode-mom .tab { color: #8c6d3f; }
+.mode-mom .faq-question i { color: #b5924c; }
+.mode-mom .faq-question:hover { background: rgba(181, 146, 76, 0.05); }
+.mode-mom .faq-question { color: #4a3420; }
+.mode-mom .value-card i { color: #b5924c; }
+.mode-mom .value-card h3 { color: #4a3420; }
+.mode-mom .highlight { color: #8c6d3f; }
+.mode-mom .marker i { color: #b5924c; }
+.mode-mom .feature i { color: #b5924c; }
+.mode-mom .hero-description { color: #5a4530; }
+.mode-mom .hero-markers .marker { color: #6b5030; }
+.mode-mom .feature { color: #4a3420; }
+.mode-mom .schedule-price { color: #7a5c2e; }
+.mode-mom .price-note { color: #8c6d3f; }
+.mode-mom .section-note { color: #8c6d3f; }
+.mode-mom .story-text { color: #5a4530; }
 
-.mode-mom .practice-item i {
-    color: #c2185b;
-}
-
-.mode-mom .schedule-time {
-    background: rgba(194, 24, 91, 0.1);
-    color: #880e4f;
-}
-
-.mode-mom .schedule-list i {
-    color: #c2185b;
-}
-
-.mode-mom .tab.active {
-    background: linear-gradient(135deg, #c2185b, #e91e8c);
-}
-
-.mode-mom .faq-question i {
-    color: #c2185b;
-}
-
-.mode-mom .faq-question:hover {
-    background: rgba(194, 24, 91, 0.05);
-}
-
-.mode-mom .value-card i {
-    color: #c2185b;
-}
-
-.mode-mom .highlight {
-    color: #c2185b;
-}
-
-.mode-mom .marker i {
-    color: #c2185b;
-}
-
-.mode-mom .feature i {
-    color: #c2185b;
-}
-
-/* ========== МАМ CTA КАРТОЧКА ========== */
+/* ========== МАМ CTA ========== */
 .cta-card-mom {
-    background: linear-gradient(135deg, #880e4f, #c2185b, #e91e8c) !important;
-}
-
-.mode-mom .section-header h2 {
-    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #8c6d3f, #b5924c, #d4a96a) !important;
 }
 
 /* ========== ФУТЕР МАМ ========== */
 .mode-mom footer {
-    background: rgba(255, 240, 248, 0.9);
+    background: rgba(247, 242, 235, 0.95);
+    backdrop-filter: blur(4px);
 }
 
 .mode-mom .footer-logo {
-    background: linear-gradient(135deg, #880e4f, #e91e8c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #7a5c2e;
+    background: none;
+    -webkit-text-fill-color: #7a5c2e;
 }
+
+.mode-mom .footer-copyright { color: #8c6d3f; }
