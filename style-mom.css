@@ -1,0 +1,298 @@
+/* ========== ПЕРЕКЛЮЧАТЕЛЬ ========== */
+.mode-switcher {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 999;
+    display: flex;
+    gap: 8px;
+    background: rgba(255,255,255,0.95);
+    padding: 6px;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+}
+
+.mode-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+}
+
+.mode-btn-dad.active {
+    background: #046b4e;
+    color: white;
+}
+
+.mode-btn-mom.active {
+    background: linear-gradient(135deg, #c2185b, #e91e8c);
+    color: white;
+}
+
+.mode-btn:hover:not(.active) {
+    background: #f0f0f0;
+}
+
+/* ========== СКРЫТИЕ/ПОКАЗ КОНТЕНТА ========== */
+.mode-dad .mom-content { display: none !important; }
+.mode-mom .dad-content { display: none !important; }
+
+/* ========== МАМ-ВЕРСИЯ: HERO ФОН ========== */
+.mode-mom .hero {
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.mode-mom .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
+    z-index: 0;
+}
+
+.mode-mom .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 240, 245, 0.88) 0%,
+        rgba(252, 228, 236, 0.80) 50%,
+        rgba(255, 245, 250, 0.85) 100%
+    );
+    z-index: 1;
+}
+
+.mode-mom .hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ========== МАМ-ВЕРСИЯ: ТИПОГРАФИКА ========== */
+.mode-mom h1 {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #880e4f, #c2185b, #e91e8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mode-mom .hero-subtitle {
+    color: #ad1457;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.mode-mom .logo {
+    background: linear-gradient(135deg, #880e4f, #e91e8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========== МАМ-ВЕРСИЯ: BADGE ========== */
+.mode-mom .badge {
+    background: rgba(194, 24, 91, 0.1);
+    color: #880e4f;
+    border: 1px solid rgba(194, 24, 91, 0.2);
+}
+
+.mode-mom .section-badge {
+    background: rgba(194, 24, 91, 0.1);
+    color: #880e4f;
+}
+
+/* ========== МАМ-ВЕРСИЯ: КНОПКИ ========== */
+.btn-mom-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    gap: 8px;
+    background: linear-gradient(135deg, #c2185b, #e91e8c);
+    color: white;
+    box-shadow: 0 4px 20px rgba(194, 24, 91, 0.3);
+}
+
+.btn-mom-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(194, 24, 91, 0.4);
+}
+
+.btn-mom-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.95rem;
+    gap: 8px;
+    background: transparent;
+    color: #c2185b;
+    border: 2px solid #c2185b;
+}
+
+.btn-mom-outline:hover {
+    background: rgba(194, 24, 91, 0.08);
+}
+
+.btn-mom-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    border-radius: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    gap: 8px;
+    background: white;
+    color: #c2185b;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border: none;
+}
+
+.btn-mom-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+}
+
+/* ========== МАМ-ВЕРСИЯ: NAVBAR ========== */
+.mode-mom .navbar {
+    background: rgba(255, 240, 248, 0.9);
+    border-bottom: 1px solid rgba(194, 24, 91, 0.1);
+}
+
+.mode-mom .btn-nav {
+    background: linear-gradient(135deg, #c2185b, #e91e8c);
+}
+
+.mode-mom .nav-link:hover {
+    color: #c2185b;
+}
+
+/* ========== МАМ-ВЕРСИЯ: СЕКЦИИ (фон) ========== */
+.mode-mom .section {
+    background: rgba(255, 245, 250, 0.92);
+}
+
+.mode-mom body {
+    background-image: url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2040&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ========== МАМ-ВЕРСИЯ: КАРТОЧКИ ========== */
+.mode-mom .principle-icon {
+    background: rgba(194, 24, 91, 0.1);
+}
+
+.mode-mom .principle-icon i {
+    color: #c2185b;
+}
+
+.mode-mom .principle-card:hover {
+    border-color: rgba(194, 24, 91, 0.2);
+}
+
+.mode-mom .story-emphasis {
+    color: #880e4f;
+    border-left-color: #e91e8c;
+}
+
+.mode-mom .practice-box {
+    background: linear-gradient(135deg, rgba(255, 240, 245, 0.9), rgba(252, 228, 236, 0.9));
+}
+
+.mode-mom .practice-box h3 {
+    color: #880e4f;
+}
+
+.mode-mom .practice-item i {
+    color: #c2185b;
+}
+
+.mode-mom .schedule-time {
+    background: rgba(194, 24, 91, 0.1);
+    color: #880e4f;
+}
+
+.mode-mom .schedule-list i {
+    color: #c2185b;
+}
+
+.mode-mom .tab.active {
+    background: linear-gradient(135deg, #c2185b, #e91e8c);
+}
+
+.mode-mom .faq-question i {
+    color: #c2185b;
+}
+
+.mode-mom .faq-question:hover {
+    background: rgba(194, 24, 91, 0.05);
+}
+
+.mode-mom .value-card i {
+    color: #c2185b;
+}
+
+.mode-mom .highlight {
+    color: #c2185b;
+}
+
+.mode-mom .marker i {
+    color: #c2185b;
+}
+
+.mode-mom .feature i {
+    color: #c2185b;
+}
+
+/* ========== МАМ CTA КАРТОЧКА ========== */
+.cta-card-mom {
+    background: linear-gradient(135deg, #880e4f, #c2185b, #e91e8c) !important;
+}
+
+.mode-mom .section-header h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ========== ФУТЕР МАМ ========== */
+.mode-mom footer {
+    background: rgba(255, 240, 248, 0.9);
+}
+
+.mode-mom .footer-logo {
+    background: linear-gradient(135deg, #880e4f, #e91e8c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

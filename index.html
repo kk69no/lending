@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перемена — школа нового подхода в Нальчике</title>
-    
-    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome для иконок -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Подключение CSS -->
     <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style-mom.css">
 </head>
-<body>
+<body class="mode-dad">
+
+    <!-- Переключатель -->
+    <div class="mode-switcher" id="modeSwitcher">
+        <button class="mode-btn mode-btn-dad active" id="btnDad" onclick="setMode('dad')">
+            <i class="fas fa-briefcase"></i> Для пап
+        </button>
+        <button class="mode-btn mode-btn-mom" id="btnMom" onclick="setMode('mom')">
+            <i class="fas fa-heart"></i> Для мам
+        </button>
+    </div>
+
     <!-- Навигация -->
     <nav class="navbar">
         <div class="container nav-container">
@@ -36,30 +42,36 @@
         </div>
     </nav>
 
-    <!-- Hero секция -->
+    <!-- Hero -->
     <section class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <span class="badge">Частная школа 1–4 классы в Нальчике</span>
                 <h1>Перемена</h1>
-                <p class="hero-subtitle">Учить думать — главная перемена</p>
-                <p class="hero-description">Мы создаём школу, где ребёнок становится самостоятельным: понимает, применяет, отвечает по возрасту — без перегрузки и унижения.</p>
-                
+                <p class="hero-subtitle dad-content">Учить думать — главная перемена</p>
+                <p class="hero-subtitle mom-content">Место, где ваш ребёнок расцветает</p>
+                <p class="hero-description dad-content">Мы создаём школу, где ребёнок становится самостоятельным: понимает, применяет, отвечает по возрасту — без перегрузки и унижения.</p>
+                <p class="hero-description mom-content">Здесь детей не торопят и не давят. Здесь учат думать, чувствовать и расти — в безопасной, тёплой среде, где каждый ребёнок важен.</p>
                 <div class="hero-features">
                     <div class="feature"><i class="fas fa-users"></i> Малые группы</div>
                     <div class="feature"><i class="fas fa-leaf"></i> Спокойный ритм</div>
-                    <div class="feature"><i class="fas fa-chalkboard-teacher"></i> Тьютор во 2-й половине дня</div>
+                    <div class="feature dad-content"><i class="fas fa-chalkboard-teacher"></i> Тьютор во 2-й половине дня</div>
+                    <div class="feature mom-content"><i class="fas fa-heart"></i> Забота и внимание</div>
                 </div>
-                
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary" id="openDOD">Записаться на ДОД 15 марта</a>
+                <div class="hero-buttons dad-content">
+                    <a href="#dod" class="btn btn-primary">Записаться на ДОД 15 марта</a>
                     <a href="#why" class="btn btn-outline">Узнать больше</a>
                 </div>
-                
+                <div class="hero-buttons mom-content">
+                    <a href="#dod" class="btn btn-mom-primary">Записаться на консультацию</a>
+                    <a href="#why" class="btn btn-mom-outline">Узнать больше</a>
+                </div>
                 <div class="hero-markers">
                     <span class="marker"><i class="fas fa-check-circle"></i> Требовательно и уважительно</span>
                     <span class="marker"><i class="fas fa-check-circle"></i> Без перегрузки</span>
-                    <span class="marker"><i class="fas fa-check-circle"></i> Результат через понимание</span>
+                    <span class="marker dad-content"><i class="fas fa-check-circle"></i> Результат через понимание</span>
+                    <span class="marker mom-content"><i class="fas fa-check-circle"></i> Счастливый ребёнок</span>
                 </div>
             </div>
         </div>
@@ -70,15 +82,21 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Наша история</span>
-                <h2>Почему мы делаем школу нового формата</h2>
+                <h2 class="dad-content">Почему мы делаем школу нового формата</h2>
+                <h2 class="mom-content">Школа, которая бережёт детство</h2>
             </div>
-            
             <div class="story-card">
-                <div class="story-text">
+                <div class="story-text dad-content">
                     <p>Дети приходят в школу с горящими глазами. Им интересно. Они хотят понимать. Они задают вопросы.</p>
                     <p>Но у многих этот огонь постепенно гаснет. Не потому что дети «не такие». Чаще причина проще: школа слишком часто учит выполнять, а не думать.</p>
                     <p>Мы видели, как работает обычная логика: тема → задания → оценка → дальше. И поняли: в современном мире этого недостаточно.</p>
                     <p class="story-emphasis">Поэтому мы создаём "Перемену" — школу, где цель — не просто пройти программу, а запустить рост ребёнка: мышление, самостоятельность, ответственность, характер.</p>
+                </div>
+                <div class="story-text mom-content">
+                    <p>Каждое утро вы отпускаете ребёнка и хотите одного — чтобы он вернулся домой живым, счастливым и с горящими глазами.</p>
+                    <p>Не уставшим. Не подавленным. Не с ощущением, что он хуже других.</p>
+                    <p>Мы создали "Перемену", потому что верим: школа должна быть местом, где ребёнку хорошо. Где его слышат, понимают и дают расти в своём темпе.</p>
+                    <p class="story-emphasis">Здесь ваш ребёнок будет в безопасности — эмоционально и физически. Здесь его будут любить, требовать и верить в него каждый день.</p>
                 </div>
             </div>
         </div>
@@ -89,62 +107,71 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Что меняем</span>
-                <h2>Мы меняем не вывеску. Мы меняем логику школы</h2>
+                <h2 class="dad-content">Мы меняем не вывеску. Мы меняем логику школы</h2>
+                <h2 class="mom-content">Среда, в которой дети расцветают</h2>
             </div>
-            
             <div class="principles-grid">
                 <div class="principle-card">
                     <div class="principle-icon"><i class="fas fa-child"></i></div>
                     <h3>Роль ребёнка</h3>
-                    <p>Ребёнок не исполнитель, а участник. Он учится выбирать, понимать и отвечать по возрасту.</p>
+                    <p class="dad-content">Ребёнок не исполнитель, а участник. Он учится выбирать, понимать и отвечать по возрасту.</p>
+                    <p class="mom-content">Ваш ребёнок — не «ученик», которого надо заполнить знаниями. Он живой человек, которого мы уважаем и слышим каждый день.</p>
                 </div>
-                
                 <div class="principle-card">
                     <div class="principle-icon"><i class="fas fa-brain"></i></div>
                     <h3>Логика обучения</h3>
-                    <p>Мы учим думать: задавать вопросы, видеть связи, применять знания — вместо заучивания ради оценки.</p>
+                    <p class="dad-content">Мы учим думать: задавать вопросы, видеть связи, применять знания — вместо заучивания ради оценки.</p>
+                    <p class="mom-content">Не «выучи и ответь», а «пойми и объясни». Дети учатся думать, а не бояться ошибиться.</p>
                 </div>
-                
                 <div class="principle-card">
                     <div class="principle-icon"><i class="fas fa-hand-holding-heart"></i></div>
                     <h3>Среда и характер</h3>
-                    <p>Школа — годы жизни в среде. Мы выстраиваем культуру уважения, правил и безопасной ошибки.</p>
+                    <p class="dad-content">Школа — годы жизни в среде. Мы выстраиваем культуру уважения, правил и безопасной ошибки.</p>
+                    <p class="mom-content">Тёплая атмосфера, добрые взрослые, никакого крика и унижения. Ошибки — это нормально, их принимают и из них растут.</p>
                 </div>
-                
                 <div class="principle-card">
                     <div class="principle-icon"><i class="fas fa-spa"></i></div>
                     <h3>Ритм без выгорания</h3>
-                    <p>Спокойный, выстроенный день без перегрузки. Внимание к пониманию и устойчивости ребёнка.</p>
+                    <p class="dad-content">Спокойный, выстроенный день без перегрузки. Внимание к пониманию и устойчивости ребёнка.</p>
+                    <p class="mom-content">Никаких гонок и перегрузок. Ребёнок приходит домой не измотанным, а живым и с желанием завтра снова в школу.</p>
                 </div>
             </div>
-            
             <div class="practice-box">
-                <h3><i class="fas fa-lightbulb"></i> Как это выглядит на практике</h3>
+                <h3><i class="fas fa-lightbulb"></i>
+                    <span class="dad-content">Как это выглядит на практике</span>
+                    <span class="mom-content">Как выглядит обычный день</span>
+                </h3>
                 <div class="practice-items">
-                    <div class="practice-item"><i class="fas fa-comment-dots"></i> Ребёнок сначала думает и объясняет, потом пишет</div>
-                    <div class="practice-item"><i class="fas fa-heart"></i> Ошибки не "стыд", а материал для роста</div>
-                    <div class="practice-item"><i class="fas fa-balance-scale"></i> Требования есть, но они понятные и стабильные</div>
+                    <div class="practice-item"><i class="fas fa-comment-dots"></i>
+                        <span class="dad-content">Ребёнок сначала думает и объясняет, потом пишет</span>
+                        <span class="mom-content">Дети приходят с улыбкой и уходят с улыбкой</span>
+                    </div>
+                    <div class="practice-item"><i class="fas fa-heart"></i>
+                        <span class="dad-content">Ошибки не "стыд", а материал для роста</span>
+                        <span class="mom-content">Учитель знает имя, характер и особенности каждого</span>
+                    </div>
+                    <div class="practice-item"><i class="fas fa-balance-scale"></i>
+                        <span class="dad-content">Требования есть, но они понятные и стабильные</span>
+                        <span class="mom-content">Родители всегда знают, как проходит день ребёнка</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Расписание дня -->
+    <!-- Расписание -->
     <section class="section" id="schedule">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Как устроен день</span>
-                <h2>День в “Перемене” (1–4 классы)</h2>
+                <h2>День в "Перемене" (1–4 классы)</h2>
             </div>
-            
             <p class="section-description">Мы делим день ребёнка на два осмысленных блока: учёба и сопровождение. Так мы сохраняем концентрацию, не перегружаем детей и даём семье гибкий выбор.</p>
-            
             <div class="schedule-tabs">
                 <div class="tab active" data-tab="tab1">Учебный день</div>
                 <div class="tab" data-tab="tab2">Full Day</div>
                 <div class="tab" data-tab="tab3">SEC-трек</div>
             </div>
-            
             <div class="tab-content active" id="tab1">
                 <div class="schedule-card">
                     <div class="schedule-time">09:00 – 14:00</div>
@@ -155,10 +182,10 @@
                         <li><i class="fas fa-check"></i> Малые группы, спокойный ритм</li>
                         <li><i class="fas fa-check"></i> Акцент на понимание, а не на заучивание</li>
                     </ul>
-                    <div class="schedule-price">45 000 ₽/мес</div>
+                    <div class="schedule-price dad-content">45 000 ₽/мес</div>
+                    <a href="#dod" class="btn btn-mom-primary mom-content" style="margin-top:20px;display:inline-flex;">Узнать подробности</a>
                 </div>
             </div>
-            
             <div class="tab-content" id="tab2">
                 <div class="schedule-card">
                     <div class="schedule-time">14:00 – 18:00</div>
@@ -170,10 +197,10 @@
                         <li><i class="fas fa-check"></i> Развивающие занятия и игры</li>
                     </ul>
                     <div class="schedule-note">Важно: во второй половине дня работают тьюторы, а не предметники</div>
-                    <div class="schedule-price">+10 000 ₽ → 55 000 ₽/мес</div>
+                    <div class="schedule-price dad-content">+10 000 ₽ → 55 000 ₽/мес</div>
+                    <a href="#dod" class="btn btn-mom-primary mom-content" style="margin-top:20px;display:inline-flex;">Записаться на консультацию</a>
                 </div>
             </div>
-            
             <div class="tab-content" id="tab3">
                 <div class="schedule-card">
                     <div class="schedule-time">14:00 – 19:00</div>
@@ -184,50 +211,55 @@
                         <li><i class="fas fa-check"></i> Работа в команде</li>
                         <li><i class="fas fa-check"></i> Проекты и креативные модули</li>
                     </ul>
-                    <div class="schedule-price">+20 000 ₽ → 65 000 ₽/мес</div>
+                    <div class="schedule-price dad-content">+20 000 ₽ → 65 000 ₽/мес</div>
+                    <a href="#dod" class="btn btn-mom-primary mom-content" style="margin-top:20px;display:inline-flex;">Узнать подробности</a>
                 </div>
             </div>
-            
-            <div class="price-note">Питание оформляется отдельно</div>
+            <div class="price-note dad-content">Питание оформляется отдельно</div>
+            <div class="price-note mom-content">Стоимость — по запросу на консультации</div>
         </div>
     </section>
 
-    <!-- За что вы платите -->
+    <!-- Ценности -->
     <section class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Честно о главном</span>
-                <h2>За что вы платите</h2>
+                <span class="section-badge dad-content">Честно о главном</span>
+                <span class="section-badge mom-content">Что получает ваш ребёнок</span>
+                <h2 class="dad-content">За что вы платите</h2>
+                <h2 class="mom-content">Всё, что важно для мамы</h2>
             </div>
-            
             <div class="value-grid">
                 <div class="value-card">
                     <i class="fas fa-users"></i>
                     <h3>Малые группы</h3>
-                    <p>Внимание к каждому ребёнку</p>
+                    <p class="dad-content">Внимание к каждому ребёнку</p>
+                    <p class="mom-content">Учитель видит именно вашего ребёнка</p>
                 </div>
-                
                 <div class="value-card">
-                    <i class="fas fa-user-tie"></i>
-                    <h3>Сильный взрослый контур</h3>
-                    <p>Учитель + тьютор</p>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3 class="dad-content">Сильный взрослый контур</h3>
+                    <h3 class="mom-content">Тёплые взрослые рядом</h3>
+                    <p class="dad-content">Учитель + тьютор</p>
+                    <p class="mom-content">Учитель и тьютор, которым можно доверять</p>
                 </div>
-                
                 <div class="value-card">
                     <i class="fas fa-clock"></i>
                     <h3>Спокойный ритм</h3>
-                    <p>Без "гонки ради программы"</p>
+                    <p class="dad-content">Без "гонки ради программы"</p>
+                    <p class="mom-content">Ребёнок не устаёт и не выгорает</p>
                 </div>
-                
                 <div class="value-card">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>Среда без давления</h3>
-                    <p>Правила, уважение, ответственность</p>
+                    <h3 class="dad-content">Среда без давления</h3>
+                    <h3 class="mom-content">Безопасная среда</h3>
+                    <p class="dad-content">Правила, уважение, ответственность</p>
+                    <p class="mom-content">Никакого крика, унижения и буллинга</p>
                 </div>
             </div>
-            
             <div class="value-footer">
-                <p><span class="highlight">Это не оправдание цены.</span> Это объяснение конструкции.</p>
+                <p class="dad-content"><span class="highlight">Это не оправдание цены.</span> Это объяснение конструкции.</p>
+                <p class="mom-content"><span class="highlight">Хотите увидеть своими глазами?</span> Приходите на День открытых дверей.</p>
             </div>
         </div>
     </section>
@@ -237,84 +269,107 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Вопросы и ответы</span>
-                <h2>Что чаще всего спрашивают родители</h2>
+                <h2 class="dad-content">Что чаще всего спрашивают родители</h2>
+                <h2 class="mom-content">Вопросы, которые волнуют мам</h2>
             </div>
-            
             <div class="faq-grid">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>У вас дисциплина будет или свобода?</span>
+                        <span class="dad-content">У вас дисциплина будет или свобода?</span>
+                        <span class="mom-content">Моему ребёнку будет комфортно?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Будет порядок и правила — спокойно и уважительно. Наша цель — не “удобные дети”, а самостоятельные.
+                        <span class="dad-content">Будет порядок и правила — спокойно и уважительно. Наша цель — не "удобные дети", а самостоятельные.</span>
+                        <span class="mom-content">Да. Мы создаём среду, где ребёнок чувствует себя в безопасности. Правила есть, но они понятные, добрые и стабильные.</span>
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Русский и математика не просядут?</span>
+                        <span class="dad-content">Русский и математика не просядут?</span>
+                        <span class="mom-content">А вдруг ребёнок отстанет от программы?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        База остаётся базой. Мы следим не за “объёмом”, а за пониманием и устойчивыми навыками.
+                        <span class="dad-content">База остаётся базой. Мы следим не за "объёмом", а за пониманием и устойчивыми навыками.</span>
+                        <span class="mom-content">Мы следим за пониманием, а не за объёмом. Ребёнок идёт вперёд, когда готов — без спешки и паники.</span>
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Как добиваетесь результата без давления?</span>
+                        <span class="dad-content">Как добиваетесь результата без давления?</span>
+                        <span class="mom-content">Как вы относитесь к ошибкам детей?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Результат держится на ритме, требованиях, обратной связи и среде. Давление даёт быстрый эффект и долгий откат.
+                        <span class="dad-content">Результат держится на ритме, требованиях, обратной связи и среде. Давление даёт быстрый эффект и долгий откат.</span>
+                        <span class="mom-content">С любовью и пониманием. Ошибка — это не стыд, а часть пути. Мы помогаем ребёнку подняться, а не ругаем за падение.</span>
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Что если ребёнок ошибается?</span>
+                        <span class="dad-content">Что если ребёнок ошибается?</span>
+                        <span class="mom-content">Как я буду знать, как дела у ребёнка?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Ошибка — часть обучения. Поддержка есть, но требования тоже есть: мы помогаем ребёнку подняться.
+                        <span class="dad-content">Ошибка — часть обучения. Поддержка есть, но требования тоже есть: мы помогаем ребёнку подняться.</span>
+                        <span class="mom-content">Мы на связи. Вы всегда знаете, как прошёл день, что получилось и над чем работаем. Без тревоги и неизвестности.</span>
                     </div>
                 </div>
-                
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Кому подойдёт “Перемена”?</span>
+                        <span>Кому подойдёт "Перемена"?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Семьям, которым важны не только предметы, но и среда; детям, которым нужен баланс учёбы и развития.
+                        <span class="dad-content">Семьям, которым важны не только предметы, но и среда; детям, которым нужен баланс учёбы и развития.</span>
+                        <span class="mom-content">Семьям, которые хотят, чтобы ребёнок рос счастливым, уверенным и самостоятельным — без страха и выгорания.</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Призыв -->
+    <!-- CTA -->
     <section class="section cta-section" id="dod">
         <div class="container">
-            <div class="cta-card">
+            <div class="cta-card dad-content">
                 <span class="cta-badge">Приходите знакомиться</span>
                 <h2>День открытых дверей</h2>
                 <div class="cta-date">15 марта, 15:00</div>
                 <p>Лучше один раз увидеть, чем читать идеальные тексты</p>
-                
                 <div class="cta-program">
                     <div class="program-item"><i class="fas fa-clock"></i> 10 мин — Как мы понимаем "школу нового подхода"</div>
                     <div class="program-item"><i class="fas fa-clock"></i> 15 мин — Как устроен учебный день</div>
                     <div class="program-item"><i class="fas fa-clock"></i> 20 мин — Ответы на вопросы</div>
                     <div class="program-item"><i class="fas fa-clock"></i> 10 мин — Знакомство с пространством</div>
                 </div>
-                
-                <a href="#" class="btn btn-primary btn-large" id="telegramBtn">
+                <a href="#" class="btn btn-primary btn-large">
                     <i class="fab fa-telegram"></i> Записаться в Telegram
                 </a>
-                <p class="cta-note">Напишите “ДОД 15 марта” — и мы подтвердим участие</p>
-                
+                <p class="cta-note">Напишите "ДОД 15 марта" — и мы подтвердим участие</p>
+                <div class="cta-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Нальчик, адрес после записи</span>
+                </div>
+            </div>
+
+            <div class="cta-card cta-card-mom mom-content">
+                <span class="cta-badge">Приходите познакомиться</span>
+                <h2>Почувствуйте атмосферу сами</h2>
+                <div class="cta-date">15 марта, 15:00</div>
+                <p>Слова — это одно. Но когда вы войдёте и увидите, как здесь всё устроено — вы поймёте сразу.</p>
+                <div class="cta-program">
+                    <div class="program-item"><i class="fas fa-heart"></i> Живое знакомство с пространством</div>
+                    <div class="program-item"><i class="fas fa-heart"></i> Рассказ об атмосфере и подходе</div>
+                    <div class="program-item"><i class="fas fa-heart"></i> Ответы на все вопросы мамы</div>
+                    <div class="program-item"><i class="fas fa-heart"></i> Без давления и обязательств</div>
+                </div>
+                <a href="#" class="btn btn-large btn-mom-cta">
+                    <i class="fab fa-telegram"></i> Записаться на консультацию
+                </a>
+                <p class="cta-note">Напишите "Хочу прийти" — и мы свяжемся с вами лично</p>
                 <div class="cta-address">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Нальчик, адрес после записи</span>
@@ -333,8 +388,28 @@
         </div>
     </footer>
 
-    <!-- Подключение JavaScript -->
     <script src="script1.js"></script>
+    <script>
+        function setMode(mode) {
+            const body = document.body;
+            const btnDad = document.getElementById('btnDad');
+            const btnMom = document.getElementById('btnMom');
+            if (mode === 'mom') {
+                body.classList.remove('mode-dad');
+                body.classList.add('mode-mom');
+                btnMom.classList.add('active');
+                btnDad.classList.remove('active');
+                localStorage.setItem('siteMode', 'mom');
+            } else {
+                body.classList.remove('mode-mom');
+                body.classList.add('mode-dad');
+                btnDad.classList.add('active');
+                btnMom.classList.remove('active');
+                localStorage.setItem('siteMode', 'dad');
+            }
+        }
+        const savedMode = localStorage.getItem('siteMode');
+        if (savedMode) setMode(savedMode);
+    </script>
 </body>
-
 </html>
