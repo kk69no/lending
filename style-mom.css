@@ -47,6 +47,18 @@
 .mode-dad .mom-content { display: none !important; }
 .mode-mom .dad-content { display: none !important; }
 
+/* ========== ПЛАШКА ЗА ТЕКСТОМ HERO ========== */
+.mode-mom .hero-content {
+    background: rgba(250, 244, 234, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 28px;
+    padding: 48px 52px;
+    border: 1px solid rgba(212, 169, 106, 0.25);
+    box-shadow: 0 8px 40px rgba(120, 80, 20, 0.08);
+    max-width: 680px;
+}
+
 /* ========== МАМ-ВЕРСИЯ: BODY ФОН ========== */
 .mode-mom body {
     background-image: none;
