@@ -68,11 +68,12 @@
 .mode-mom .hero::before {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: -20px;
     background:
         url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2232&auto=format&fit=crop')
         center/cover no-repeat;
     z-index: 0;
+    filter: blur(6px);
 }
 
 /* Оверлей убран полностью */
