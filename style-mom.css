@@ -35,272 +35,61 @@
 }
 
 .mode-btn-mom.active {
-    background: #6b7c5c;
+    background: #046b4e;
     color: white;
 }
 
 .mode-btn:hover:not(.active) {
-    background: #f5f0ea;
+    background: #f0f0f0;
 }
 
 /* ========== СКРЫТИЕ/ПОКАЗ КОНТЕНТА ========== */
 .mode-dad .mom-content { display: none !important; }
 .mode-mom .dad-content { display: none !important; }
 
-/* ========== МАМ-ВЕРСИЯ: BODY ========== */
-.mode-mom body {
-    background-image: none;
-    background-color: #f0ebe3;
-}
-
-/* ========== МАМ-ВЕРСИЯ: HERO ========== */
-.mode-mom .hero {
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 120px 0 80px;
-    background: none;
-    backdrop-filter: none;
-}
-
-.mode-mom .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2232&auto=format&fit=crop')
-        center/cover no-repeat;
-    z-index: 0;
-    filter: none;
-}
-
-.mode-mom .hero::after {
-    display: none;
-}
-
-.mode-mom .hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* ========== МАМ-ВЕРСИЯ: HERO КОНТЕНТ ========== */
-.mode-mom .hero-content {
-    max-width: 620px;
-    background: none;
-    padding: 0;
-}
-
-/* ========== МАМ HERO — только фон ========== */
-.mode-mom .hero-content {
-    display: none !important;
-}
-
-/* ========== МАМ-ВЕРСИЯ: ЗАГОЛОВОК ========== */
-.mode-mom h1 {
-    font-family: 'Georgia', serif !important;
-    font-size: clamp(3rem, 7vw, 5.5rem) !important;
-    font-weight: 400 !important;
-    color: #2a2218 !important;
-    -webkit-text-fill-color: #2a2218 !important;
-    background: none !important;
-    letter-spacing: -0.01em;
-    margin-bottom: 16px;
-    line-height: 1.05;
-}
-
-/* ========== МАМ-ВЕРСИЯ: ПОДЗАГОЛОВОК (badge роль) ========== */
-.mode-mom .hero-subtitle {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 1.1rem !important;
-    font-weight: 400 !important;
-    color: #3a3020 !important;
-    margin-bottom: 24px;
-    letter-spacing: 0;
-}
-
-/* ========== МАМ-ВЕРСИЯ: ОПИСАНИЕ ========== */
-.mode-mom .hero-description {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.05rem !important;
-    color: #2a2218 !important;
-    line-height: 1.65;
-    margin-bottom: 36px;
-}
-
-/* ========== МАМ-ВЕРСИЯ: ФИЧИ — убрать иконки ========== */
-.mode-mom .hero-features {
-    display: none;
-}
-
-/* ========== МАМ-ВЕРСИЯ: КНОПКИ — прямоугольные ========== */
-.mode-mom .hero-buttons {
-    display: flex;
-    gap: 0;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-}
-
+/* ========== МАМ ВЕРСИЯ — всё как у пап ========== */
+/* Кнопки для мам — такие же как у пап */
 .btn-mom-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 32px;
-    border-radius: 0;
-    font-weight: 400;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-weight: 500;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    background: #6b7c5c;
+    font-size: 0.95rem;
+    gap: 8px;
+    background: var(--primary);
     color: white;
-    letter-spacing: 0.01em;
 }
 
 .btn-mom-primary:hover {
-    background: #5a6a4c;
+    background: var(--primary-dark);
+    transform: translateY(-2px);
 }
 
 .btn-mom-outline {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 32px;
-    border-radius: 0;
-    font-weight: 400;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-weight: 500;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
     cursor: pointer;
-    font-size: 1rem;
-    background: rgba(255,255,255,0.75);
-    color: #2a2218;
-    border: none;
-    letter-spacing: 0.01em;
+    font-size: 0.95rem;
+    gap: 8px;
+    background: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
 }
 
 .btn-mom-outline:hover {
-    background: rgba(255,255,255,0.9);
-}
-
-/* ========== МАМ-ВЕРСИЯ: МАРКЕРЫ ========== */
-.mode-mom .hero-markers {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.mode-mom .hero-markers .marker {
-    color: #3a3020 !important;
-    font-size: 0.95rem;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    gap: 0;
-}
-
-.mode-mom .hero-markers .marker i {
-    display: none;
-}
-
-.mode-mom .hero-markers {
-    gap: 0;
-}
-
-.mode-mom .hero-markers .marker::after {
-    content: ' · ';
-    margin: 0 12px;
-    color: #8a7a60;
-}
-
-.mode-mom .hero-markers .marker:last-child::after {
-    display: none;
-}
-
-/* ========== МАМ-ВЕРСИЯ: NAVBAR ========== */
-.mode-mom .navbar {
-    background: rgba(240, 235, 227, 0.92);
-    border-bottom: 1px solid rgba(100, 80, 40, 0.1);
-}
-
-.mode-mom .logo {
-    color: #2a2218 !important;
-    -webkit-text-fill-color: #2a2218 !important;
-    background: none !important;
-    font-family: 'Georgia', serif;
-    font-weight: 400;
-}
-
-.mode-mom .nav-link { color: #3a3020; }
-.mode-mom .nav-link:hover { color: #6b7c5c; }
-
-.mode-mom .btn-nav {
-    background: #6b7c5c;
-    color: white !important;
-    border-radius: 6px;
-    padding: 8px 18px;
-}
-
-/* ========== МАМ-ВЕРСИЯ: СЕКЦИИ ========== */
-.mode-mom .section {
-    background: rgba(245, 240, 232, 0.96);
-    backdrop-filter: none;
-}
-
-.mode-mom .section-header h2 {
-    font-family: 'Georgia', serif;
-    font-weight: 400;
-    color: #2a2218;
-}
-
-.mode-mom .section-badge {
-    background: rgba(107, 124, 92, 0.12);
-    color: #6b7c5c;
-}
-
-.mode-mom .story-card,
-.mode-mom .schedule-card,
-.mode-mom .value-footer {
-    background: #faf7f2;
-    border: 1px solid rgba(100, 80, 40, 0.1);
-}
-
-.mode-mom .story-emphasis {
-    color: #5a6a4c;
-    border-left-color: #6b7c5c;
-}
-
-.mode-mom .practice-box {
-    background: rgba(107, 124, 92, 0.08);
-    border: 1px solid rgba(107, 124, 92, 0.15);
-}
-
-.mode-mom .practice-box h3 { color: #2a2218; }
-.mode-mom .practice-item i { color: #6b7c5c; }
-.mode-mom .principle-icon { background: rgba(107, 124, 92, 0.1); }
-.mode-mom .principle-icon i { color: #6b7c5c; }
-.mode-mom .principle-card { background: #faf7f2; border: 1px solid rgba(100,80,40,0.08); }
-.mode-mom .principle-card:hover { border-color: rgba(107, 124, 92, 0.3); }
-.mode-mom .schedule-time { background: rgba(107, 124, 92, 0.1); color: #5a6a4c; }
-.mode-mom .schedule-list i { color: #6b7c5c; }
-.mode-mom .tab { color: #5a4a30; background: #f0ebe3; }
-.mode-mom .tab.active { background: #6b7c5c; color: white; }
-.mode-mom .faq-question i { color: #6b7c5c; }
-.mode-mom .faq-question:hover { background: rgba(107, 124, 92, 0.05); }
-.mode-mom .faq-item { background: #faf7f2; border-color: rgba(100,80,40,0.1); }
-.mode-mom .value-card { background: #faf7f2; border: 1px solid rgba(100,80,40,0.08); }
-.mode-mom .value-card i { color: #6b7c5c; }
-.mode-mom .value-card h3 { color: #2a2218; }
-.mode-mom .highlight { color: #5a6a4c; }
-.mode-mom .marker i { color: #6b7c5c; }
-.mode-mom .feature i { color: #6b7c5c; }
-.mode-mom .schedule-price { color: #5a6a4c; }
-.mode-mom .story-text { color: #3a3020; }
-
-/* ========== МАМ CTA ========== */
-.cta-card-mom {
-    background: linear-gradient(135deg, #5a6a4c, #6b7c5c) !important;
+    background: var(--primary-light);
 }
 
 .btn-mom-cta {
@@ -308,30 +97,19 @@
     align-items: center;
     justify-content: center;
     padding: 16px 40px;
-    border-radius: 0;
-    font-weight: 400;
+    border-radius: 40px;
+    font-weight: 500;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
     cursor: pointer;
     font-size: 1rem;
+    gap: 8px;
     background: white;
-    color: #5a6a4c;
+    color: var(--primary);
     border: none;
 }
 
 .btn-mom-cta:hover {
     background: rgba(255,255,255,0.9);
+    transform: translateY(-2px);
 }
-
-/* ========== ФУТЕР МАМ ========== */
-.mode-mom footer {
-    background: rgba(240, 235, 227, 0.95);
-}
-
-.mode-mom .footer-logo {
-    color: #2a2218 !important;
-    background: none !important;
-    -webkit-text-fill-color: #2a2218 !important;
-}
-
-.mode-mom .footer-copyright { color: #6b5c40; }
