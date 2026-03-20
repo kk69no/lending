@@ -201,6 +201,9 @@ body.mode-mom .value-icon i { color: #8b7355; }
 
 /* ========== MOM RESPONSIVE ========== */
 @media (max-width: 768px) {
+    body.mode-mom {
+        background-attachment: scroll;
+    }
     body.mode-mom .hero-content {
         padding: 28px 22px;
         border-radius: 20px;
