@@ -47,17 +47,19 @@ body.mode-mom .navbar.scrolled {
 
 /* ========== MOM HERO ========== */
 body.mode-mom .hero {
-    background: transparent;
+    background: rgba(255, 252, 247, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 body.mode-mom .hero::before { display: none; }
 body.mode-mom .hero-content {
-    background: rgba(255, 252, 247, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 24px;
-    padding: 48px 52px;
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
 }
 
 /* ========== MOM SECTIONS ========== */
@@ -65,10 +67,13 @@ body.mode-mom .section {
     background: rgba(255, 252, 247, 0.75);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-radius: 48px;
-    margin: 20px 24px;
-    border-top: none !important;
+    border-radius: 0;
+    margin: 0;
+    border-top: 1px solid rgba(180, 165, 140, 0.15) !important;
     position: relative;
+}
+body.mode-mom .section:first-of-type {
+    border-radius: 0;
 }
 body.mode-mom .section::before {
     display: none;
@@ -77,7 +82,7 @@ body.mode-mom .section > .container {
     position: relative;
 }
 
-/* ========== MOM CARDS — glass ========== */
+/* ========== MOM CARDS — solid like dad ========== */
 body.mode-mom .story-card,
 body.mode-mom .schedule-card,
 body.mode-mom .principle-card,
@@ -85,10 +90,10 @@ body.mode-mom .value-card,
 body.mode-mom .faq-item,
 body.mode-mom .value-footer,
 body.mode-mom .practice-box {
-    background: rgba(255, 253, 249, 0.72);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-color: rgba(255, 255, 255, 0.65);
+    background: var(--white);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-color: rgba(180, 165, 140, 0.2);
     box-shadow: 0 4px 20px rgba(140, 115, 80, 0.06);
 }
 
@@ -117,9 +122,9 @@ body.mode-mom footer {
     background: rgba(255, 252, 247, 0.75);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-radius: 48px 48px 0 0;
-    border-top: none;
-    margin: 20px 24px 0;
+    border-radius: 0;
+    border-top: 1px solid rgba(180, 165, 140, 0.15);
+    margin: 0;
 }
 
 /* ========== MOM NAVBAR transparent start ========== */
@@ -204,19 +209,6 @@ body.mode-mom .value-icon i { color: #8b7355; }
     body.mode-mom {
         background-attachment: scroll;
     }
-    body.mode-mom .hero-content {
-        padding: 28px 22px;
-        border-radius: 20px;
-    }
-    body.mode-mom .section {
-        margin: 10px 12px;
-        border-radius: 28px;
-        padding: 48px 0;
-    }
-    body.mode-mom footer {
-        margin: 10px 12px 0;
-        border-radius: 28px 28px 0 0;
-    }
     body.mode-mom .nav-menu.active .nav-list {
         background: rgba(255, 252, 247, 0.95);
         backdrop-filter: blur(16px);
@@ -224,20 +216,5 @@ body.mode-mom .value-icon i { color: #8b7355; }
     }
     body.mode-mom .mode-switcher {
         bottom: 12px; right: 12px;
-    }
-}
-
-@media (max-width: 380px) {
-    body.mode-mom .hero-content {
-        padding: 24px 18px;
-        border-radius: 18px;
-    }
-    body.mode-mom .section {
-        margin: 8px 8px;
-        border-radius: 22px;
-    }
-    body.mode-mom footer {
-        margin: 8px 8px 0;
-        border-radius: 22px 22px 0 0;
     }
 }
