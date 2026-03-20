@@ -62,24 +62,19 @@ body.mode-mom .hero-content {
 
 /* ========== MOM SECTIONS ========== */
 body.mode-mom .section {
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-radius: 0;
-    margin: 0;
-    border-top: 1px solid rgba(180, 165, 140, 0.2) !important;
+    background: rgba(255, 252, 247, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 48px;
+    margin: 20px 0;
+    border-top: none !important;
     position: relative;
 }
 body.mode-mom .section::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: rgba(250, 246, 239, 0.75);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    z-index: 0;
+    display: none;
 }
 body.mode-mom .section > .container {
-    position: relative; z-index: 1;
+    position: relative;
 }
 
 /* ========== MOM CARDS — glass ========== */
@@ -112,9 +107,6 @@ body.mode-mom .marker-dot { background: #8b7355; }
 body.mode-mom .principle-number { color: rgba(139, 115, 85, 0.15); }
 
 /* ========== MOM CTA ========== */
-body.mode-mom .cta-section::before {
-    background: rgba(240, 234, 224, 0.55);
-}
 body.mode-mom .cta-card-mom {
     background: #8b7355;
 }
@@ -122,11 +114,12 @@ body.mode-mom .cta-card-mom h2 { color: white; }
 
 /* ========== MOM FOOTER ========== */
 body.mode-mom footer {
-    background: rgba(245, 240, 232, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 0;
-    border-top: 1px solid rgba(180, 165, 140, 0.2);
+    background: rgba(255, 252, 247, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 48px 48px 0 0;
+    border-top: none;
+    margin-top: 20px;
 }
 
 /* ========== MOM NAVBAR transparent start ========== */
