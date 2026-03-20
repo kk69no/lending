@@ -38,6 +38,11 @@ body.mode-mom {
     background-attachment: fixed;
     background-color: #efe9e0;
 }
+body.mode-mom::after {
+    background: rgba(255, 252, 247, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
 
 /* ========== MOM NAVBAR ========== */
 body.mode-mom .navbar.scrolled {
@@ -47,9 +52,9 @@ body.mode-mom .navbar.scrolled {
 
 /* ========== MOM HERO ========== */
 body.mode-mom .hero {
-    background: rgba(255, 252, 247, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 body.mode-mom .hero::before { display: none; }
 body.mode-mom .hero-content {
@@ -64,13 +69,12 @@ body.mode-mom .hero-content {
 
 /* ========== MOM SECTIONS ========== */
 body.mode-mom .section {
-    background: rgba(255, 252, 247, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-radius: 0;
     margin: 0;
     border-top: none !important;
-    position: relative;
 }
 body.mode-mom .section:first-of-type {
     border-radius: 0;
@@ -119,9 +123,9 @@ body.mode-mom .cta-card-mom h2 { color: white; }
 
 /* ========== MOM FOOTER ========== */
 body.mode-mom footer {
-    background: rgba(255, 252, 247, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-radius: 0;
     border-top: none;
     margin: 0;
