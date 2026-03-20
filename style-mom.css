@@ -66,7 +66,7 @@ body.mode-mom .section {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 48px;
-    margin: 20px 0;
+    margin: 20px 24px;
     border-top: none !important;
     position: relative;
 }
@@ -119,7 +119,7 @@ body.mode-mom footer {
     -webkit-backdrop-filter: blur(8px);
     border-radius: 48px 48px 0 0;
     border-top: none;
-    margin-top: 20px;
+    margin: 20px 24px 0;
 }
 
 /* ========== MOM NAVBAR transparent start ========== */
@@ -203,6 +203,14 @@ body.mode-mom .value-icon i { color: #8b7355; }
 @media (max-width: 768px) {
     body.mode-mom .hero-content {
         padding: 32px 24px;
+    }
+    body.mode-mom .section {
+        margin: 12px 12px;
+        border-radius: 32px;
+    }
+    body.mode-mom footer {
+        margin: 12px 12px 0;
+        border-radius: 32px 32px 0 0;
     }
     body.mode-mom .nav-menu.active .nav-list {
         background: rgba(255, 252, 247, 0.95);
