@@ -591,32 +591,120 @@ footer {
 
 @media (max-width: 768px) {
     html { font-size: 16px; }
+    .container { padding: 0 20px; }
+
+    /* Navbar */
+    .navbar { padding: 14px 0; }
+    .navbar.scrolled { padding: 10px 0; }
+    .logo { font-size: 1.4rem; }
     .nav-list { display: none; }
     .nav-toggle { display: block; }
     .nav-menu.active .nav-list {
         display: flex; flex-direction: column;
         position: absolute;
-        top: 64px; left: 16px; right: 16px;
+        top: 60px; left: 16px; right: 16px;
         background: var(--white);
-        padding: 28px;
-        gap: 18px;
+        padding: 24px;
+        gap: 16px;
         border-radius: var(--radius);
         box-shadow: var(--shadow-hover);
         border: 1px solid var(--border);
+        z-index: 200;
     }
-    .hero { padding: 120px 0 80px; }
-    .section { padding: 72px 0; }
-    .practice-items { grid-template-columns: 1fr; }
-    .story-card { padding: 32px 28px; }
-    .schedule-card { padding: 32px 28px; }
-    .cta-card { padding: 48px 28px; }
-    .hero-markers { flex-direction: column; gap: 10px; }
-    .hero-features { flex-direction: column; gap: 12px; }
+    .nav-menu.active .btn-nav {
+        text-align: center;
+        display: block;
+        padding: 12px 20px;
+    }
+
+    /* Hero */
+    .hero { padding: 100px 0 60px; min-height: auto; }
+    h1 { font-size: 2.6rem; }
+    .hero-subtitle { font-size: 1.3rem; margin-bottom: 16px; }
+    .hero-description { font-size: 1rem; margin-bottom: 28px; }
+    .hero-features { flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .feature { font-size: 0.9rem; }
+    .hero-buttons { flex-direction: column; gap: 10px; margin-bottom: 32px; }
+    .btn { width: 100%; justify-content: center; padding: 14px 24px; }
+    .hero-markers { flex-direction: column; gap: 8px; }
+    .marker { font-size: 0.82rem; }
+    .badge { font-size: 0.75rem; padding: 6px 14px; margin-bottom: 20px; }
+
+    /* Sections */
+    .section { padding: 60px 0; }
+    .section-header { margin-bottom: 36px; }
+    .section-header h2 { font-size: 1.6rem; }
+    .section-badge { font-size: 0.72rem; }
+    .section-description { font-size: 0.95rem; margin-bottom: 28px; }
+
+    /* Story */
+    .story-card { padding: 28px 22px; }
+    .story-text { font-size: 1rem; }
+    .story-emphasis { font-size: 1.05rem; padding-left: 18px; }
+
+    /* Principles */
+    .principles-grid { grid-template-columns: 1fr; gap: 14px; margin-bottom: 28px; }
+    .principle-card { padding: 24px 20px; }
+    .principle-number { width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 14px; }
+    .principle-card h3 { font-size: 1.1rem; }
+    .principle-card p { font-size: 0.9rem; }
+    .practice-box { padding: 24px 20px; }
+    .practice-box h3 { font-size: 1.1rem; margin-bottom: 18px; }
+    .practice-items { grid-template-columns: 1fr; gap: 12px; }
+    .practice-item { font-size: 0.88rem; }
+
+    /* Schedule */
+    .schedule-tabs { gap: 6px; }
+    .tab { padding: 9px 16px; font-size: 0.82rem; }
+    .schedule-card { padding: 28px 22px; max-width: 100%; }
+    .schedule-card h3 { font-size: 1.15rem; }
+    .schedule-list li { font-size: 0.9rem; gap: 10px; margin-bottom: 10px; }
+    .schedule-price { font-size: 1.6rem; }
+    .schedule-note { font-size: 0.82rem; padding: 12px 14px; }
+
+    /* Values */
+    .value-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .value-card { padding: 24px 16px; }
+    .value-icon { width: 44px; height: 44px; margin-bottom: 14px; }
+    .value-icon i { font-size: 1rem; }
+    .value-card h3 { font-size: 1rem; }
+    .value-card p { font-size: 0.82rem; }
+    .value-footer { padding: 14px 18px; font-size: 0.88rem; }
+
+    /* FAQ */
+    .faq-grid { gap: 8px; }
+    .faq-question { padding: 16px 18px; font-size: 0.9rem; }
+    .faq-answer-inner { padding: 0 18px 18px; font-size: 0.85rem; }
+
+    /* CTA */
+    .cta-card { padding: 40px 22px; }
+    .cta-card h2 { font-size: 1.5rem; }
+    .cta-date { font-size: 1.5rem; }
+    .cta-program { margin: 24px auto; }
+    .program-item { font-size: 0.85rem; }
+    .btn-cta { padding: 14px 32px; font-size: 0.9rem; }
+    .cta-note { font-size: 0.78rem; }
+    .cta-address { font-size: 0.85rem; }
+
+    /* Footer */
+    .footer-content { flex-direction: column; text-align: center; gap: 8px; }
+    .footer-logo { font-size: 1.1rem; }
+    .footer-copyright { font-size: 0.78rem; }
+
+    /* Switcher */
+    .mode-switcher {
+        bottom: 16px; right: 16px;
+        padding: 4px;
+    }
+    .mode-btn { padding: 8px 14px; font-size: 0.75rem; }
 }
 
-@media (max-width: 480px) {
-    .principles-grid, .value-grid { grid-template-columns: 1fr; }
-    .hero-buttons { flex-direction: column; }
-    .btn { width: 100%; justify-content: center; }
-    .section { padding: 56px 0; }
+@media (max-width: 380px) {
+    .container { padding: 0 16px; }
+    h1 { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1.15rem; }
+    .value-grid { grid-template-columns: 1fr; }
+    .cta-card { padding: 32px 18px; }
+    .cta-card h2 { font-size: 1.3rem; }
+    .tab { padding: 8px 12px; font-size: 0.78rem; }
 }

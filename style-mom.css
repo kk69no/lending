@@ -202,19 +202,39 @@ body.mode-mom .value-icon i { color: #8b7355; }
 /* ========== MOM RESPONSIVE ========== */
 @media (max-width: 768px) {
     body.mode-mom .hero-content {
-        padding: 32px 24px;
+        padding: 28px 22px;
+        border-radius: 20px;
     }
     body.mode-mom .section {
-        margin: 12px 12px;
-        border-radius: 32px;
+        margin: 10px 12px;
+        border-radius: 28px;
+        padding: 48px 0;
     }
     body.mode-mom footer {
-        margin: 12px 12px 0;
-        border-radius: 32px 32px 0 0;
+        margin: 10px 12px 0;
+        border-radius: 28px 28px 0 0;
     }
     body.mode-mom .nav-menu.active .nav-list {
         background: rgba(255, 252, 247, 0.95);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
+    }
+    body.mode-mom .mode-switcher {
+        bottom: 12px; right: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    body.mode-mom .hero-content {
+        padding: 24px 18px;
+        border-radius: 18px;
+    }
+    body.mode-mom .section {
+        margin: 8px 8px;
+        border-radius: 22px;
+    }
+    body.mode-mom footer {
+        margin: 8px 8px 0;
+        border-radius: 22px 22px 0 0;
     }
 }
