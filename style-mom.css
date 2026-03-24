@@ -1,8 +1,7 @@
 /* ========== MODE SWITCHER ========== */
 .mode-switcher {
     position: fixed;
-    top: 24px; left: 50%;
-    transform: translateX(-50%);
+    top: 24px; right: 24px;
     z-index: 999;
     display: flex; gap: 4px;
     background: rgba(255,255,255,0.92);
