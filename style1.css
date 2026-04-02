@@ -166,12 +166,12 @@ body::after {
     border: 1px solid var(--border);
 }
 h1 {
-    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    font-size: clamp(2.4rem, 6vw, 3.8rem);
     font-weight: 700;
     letter-spacing: -0.03em;
     color: var(--primary-dark);
-    margin-bottom: 8px;
-    line-height: 1.1;
+    margin-bottom: 24px;
+    line-height: 1.15;
 }
 .hero-subtitle {
     font-size: clamp(1.55rem, 3vw, 2rem);
@@ -630,7 +630,7 @@ footer {
 
     /* Hero */
     .hero { padding: 100px 0 60px; min-height: auto; }
-    h1 { font-size: 2.6rem; }
+    h1 { font-size: 2rem; }
     .hero-subtitle { font-size: 1.3rem; margin-bottom: 16px; }
     .hero-description { font-size: 1rem; margin-bottom: 28px; }
     .hero-features { flex-direction: column; gap: 10px; margin-bottom: 28px; }
@@ -712,7 +712,7 @@ footer {
 
 @media (max-width: 380px) {
     .container { padding: 0 16px; }
-    h1 { font-size: 2.2rem; }
+    h1 { font-size: 1.7rem; }
     .hero-subtitle { font-size: 1.15rem; }
     .value-grid { grid-template-columns: 1fr; }
     .cta-card { padding: 32px 18px; }
