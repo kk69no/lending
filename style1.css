@@ -86,11 +86,11 @@ body::after {
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .logo {
-    font-size: 1.65rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--primary);
     text-decoration: none;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
 }
 .nav-list {
     display: flex; list-style: none;
@@ -607,7 +607,7 @@ footer {
     /* Navbar */
     .navbar { padding: 14px 0; }
     .navbar.scrolled { padding: 10px 0; }
-    .logo { font-size: 1.4rem; }
+    .logo { font-size: 1.8rem; }
     .nav-list { display: none; }
     .nav-toggle { display: block; }
     .nav-menu.active .nav-list {
