@@ -169,10 +169,12 @@ h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 700;
     letter-spacing: -0.03em;
-    color: var(--accent);
+    color: var(--primary-dark);
     margin-bottom: 14px;
     line-height: 1.15;
 }
+.text-green { color: var(--primary); }
+.text-accent { color: var(--accent); }
 .hero-subtitle {
     font-size: clamp(1.55rem, 3vw, 2rem);
     font-weight: 600;
