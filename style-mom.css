@@ -207,7 +207,7 @@ body.mode-mom h1 {
     color: #3a3028;
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 600;
-    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
     line-height: 1.4;
     max-width: 100%;
 }
