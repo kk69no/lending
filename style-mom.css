@@ -1,7 +1,7 @@
 /* ========== MODE SWITCHER ========== */
 .mode-switcher {
     position: fixed;
-    top: 24px; right: 24px;
+    top: 24px; left: 24px;
     z-index: 999;
     display: flex; gap: 4px;
     background: rgba(255,255,255,0.92);
@@ -220,5 +220,6 @@ body.mode-mom .value-icon i { color: #8b7355; }
     }
     body.mode-mom .mode-switcher {
         top: 16px;
+        left: 16px;
     }
 }

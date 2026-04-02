@@ -704,6 +704,7 @@ footer {
 
     .mode-switcher {
         top: 16px;
+        left: 16px;
         padding: 4px;
     }
     .mode-btn { padding: 8px 14px; font-size: 0.75rem; }
