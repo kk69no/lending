@@ -7,7 +7,7 @@
     background: rgba(255,255,255,0.92);
     padding: 5px;
     border-radius: 50px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255,255,255,0.6);
@@ -26,9 +26,9 @@
     font-family: 'Manrope', sans-serif;
     letter-spacing: 0.01em;
 }
-.mode-btn-dad.active { background: var(--primary, #3a5a40); color: white; }
-.mode-btn-mom.active { background: #8b7355; color: white; }
-.mode-btn:hover:not(.active) { background: #f0ede8; color: #666; }
+.mode-btn-dad.active { background: var(--primary, #046b4e); color: white; }
+.mode-btn-mom.active { background: #b89585; color: white; }
+.mode-btn:hover:not(.active) { background: #f5f0ec; color: #777; }
 
 /* ========== MOM MODE: BACKGROUND ========== */
 body.mode-mom {
@@ -36,19 +36,28 @@ body.mode-mom {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #efe9e0;
+    background-color: #f3ece6;
 }
 body.mode-mom::after {
-    background: rgba(255, 252, 247, 0.72);
+    background: rgba(255, 253, 250, 0.78);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
 
 /* ========== MOM NAVBAR ========== */
 body.mode-mom .navbar.scrolled {
-    background: rgba(245, 240, 233, 0.88);
-    border-bottom-color: rgba(180, 165, 140, 0.2);
+    background: rgba(255, 253, 250, 0.9);
+    border-bottom-color: rgba(184, 149, 133, 0.1);
 }
+body.mode-mom .navbar:not(.scrolled) {
+    background: transparent;
+}
+body.mode-mom .navbar:not(.scrolled) .logo { color: #5a4a42; }
+body.mode-mom .navbar:not(.scrolled) .nav-link { color: #6b5d55; }
+body.mode-mom .navbar .nav-link { color: #6b5d55; }
+body.mode-mom .navbar .nav-link:hover { color: #b89585; }
+body.mode-mom .navbar .nav-link::after { background: #b89585; }
+body.mode-mom .logo { color: #5a4a42; }
 
 /* ========== MOM HERO ========== */
 body.mode-mom .hero {
@@ -76,17 +85,11 @@ body.mode-mom .section {
     margin: 0;
     border-top: none !important;
 }
-body.mode-mom .section:first-of-type {
-    border-radius: 0;
-}
-body.mode-mom .section::before {
-    display: none;
-}
-body.mode-mom .section > .container {
-    position: relative;
-}
+body.mode-mom .section:first-of-type { border-radius: 0; }
+body.mode-mom .section::before { display: none; }
+body.mode-mom .section > .container { position: relative; }
 
-/* ========== MOM CARDS — solid like dad ========== */
+/* ========== MOM CARDS ========== */
 body.mode-mom .story-card,
 body.mode-mom .schedule-card,
 body.mode-mom .principle-card,
@@ -94,32 +97,50 @@ body.mode-mom .value-card,
 body.mode-mom .faq-item,
 body.mode-mom .value-footer,
 body.mode-mom .practice-box {
-    background: var(--white);
+    background: #fffdfb;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    border-color: rgba(180, 165, 140, 0.2);
-    box-shadow: 0 4px 20px rgba(140, 115, 80, 0.06);
+    border-color: rgba(184, 149, 133, 0.12);
+    box-shadow: 0 2px 12px rgba(160, 130, 110, 0.05);
 }
+body.mode-mom .principle-card:hover,
+body.mode-mom .value-card:hover {
+    box-shadow: 0 6px 24px rgba(160, 130, 110, 0.1);
+    border-color: rgba(184, 149, 133, 0.2);
+}
+body.mode-mom .faq-item:hover { border-color: rgba(184, 149, 133, 0.25); }
+body.mode-mom .faq-question:hover { background: rgba(184, 149, 133, 0.04); }
+body.mode-mom .practice-box { background: #fdf9f6; }
 
-/* ========== MOM COLORS — warmer accent ========== */
-body.mode-mom .badge,
-body.mode-mom .section-badge {
-    color: #8b7355;
+/* ========== MOM COLORS — soft warm blush ========== */
+body.mode-mom .badge {
+    background: rgba(184, 149, 133, 0.08);
+    border-color: rgba(184, 149, 133, 0.15);
+    color: #b89585;
 }
+body.mode-mom .section-badge { color: #b89585; }
 body.mode-mom .schedule-time {
-    background: rgba(139, 115, 85, 0.1);
-    color: #8b7355;
+    background: rgba(184, 149, 133, 0.08);
+    color: #a08272;
 }
-body.mode-mom .check-icon { color: #8b7355; }
-body.mode-mom .practice-icon { color: #8b7355; }
-body.mode-mom .marker-dot { background: #8b7355; }
-body.mode-mom .principle-number { color: rgba(139, 115, 85, 0.15); }
+body.mode-mom .check-icon { color: #b89585; }
+body.mode-mom .practice-icon { color: #c4a898; }
+body.mode-mom .marker-dot { background: #c4a898; }
+body.mode-mom .principle-number { color: rgba(184, 149, 133, 0.12); }
+body.mode-mom .schedule-note {
+    background: rgba(184, 149, 133, 0.06);
+    color: #a08272;
+}
 
 /* ========== MOM CTA ========== */
 body.mode-mom .cta-card-mom {
-    background: #8b7355;
+    background: linear-gradient(135deg, #b89585 0%, #a68475 100%);
 }
 body.mode-mom .cta-card-mom h2 { color: white; }
+body.mode-mom .cta-card-mom .cta-badge {
+    background: rgba(255,255,255,0.15);
+}
+body.mode-mom .cta-card-mom .program-dot { background: rgba(255,255,255,0.35); }
 
 /* ========== MOM FOOTER ========== */
 body.mode-mom footer {
@@ -130,86 +151,93 @@ body.mode-mom footer {
     border-top: none;
     margin: 0;
 }
-
-/* ========== MOM NAVBAR transparent start ========== */
-body.mode-mom .navbar:not(.scrolled) {
-    background: transparent;
-}
-body.mode-mom .navbar:not(.scrolled) .logo {
-    color: #5a4a38;
-}
-body.mode-mom .navbar:not(.scrolled) .nav-link {
-    color: #5a4a38;
-}
+body.mode-mom .footer-logo { color: #5a4a42; }
+body.mode-mom .footer-copyright { color: #a09890; }
 
 /* ========== MOM BUTTONS ========== */
 body.mode-mom .btn-primary {
-    background: #8b7355;
-    box-shadow: 0 4px 16px rgba(139, 115, 85, 0.2);
+    background: #b89585;
+    box-shadow: 0 4px 16px rgba(184, 149, 133, 0.25);
 }
 body.mode-mom .btn-primary:hover {
-    background: #7a6548;
-    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.25);
+    background: #a68475;
+    box-shadow: 0 8px 24px rgba(184, 149, 133, 0.3);
 }
 body.mode-mom .btn-outline {
-    color: #8b7355;
-    border-color: rgba(139, 115, 85, 0.3);
+    color: #a08272;
+    border-color: rgba(184, 149, 133, 0.3);
 }
 body.mode-mom .btn-outline:hover {
-    background: rgba(139, 115, 85, 0.08);
-    border-color: #8b7355;
+    background: rgba(184, 149, 133, 0.06);
+    border-color: #b89585;
+    color: #b89585;
 }
 body.mode-mom .btn-nav {
-    background: #8b7355;
+    background: #b89585;
 }
 body.mode-mom .btn-nav:hover {
-    background: #7a6548;
+    background: #a68475;
 }
 body.mode-mom .btn-cta {
-    color: #8b7355;
+    color: #a08272;
 }
 
 /* ========== MOM TAB ========== */
-body.mode-mom .tab.active {
-    background: #8b7355;
-    border-color: #8b7355;
+body.mode-mom .tab {
+    border-color: rgba(184, 149, 133, 0.15);
 }
-body.mode-mom .tab:hover {
-    border-color: #8b7355;
+body.mode-mom .tab.active {
+    background: #b89585;
+    border-color: #b89585;
+    color: white;
+}
+body.mode-mom .tab:hover:not(.active) {
+    border-color: #c4a898;
+    color: #a08272;
 }
 
 /* ========== MOM FAQ icon ========== */
 body.mode-mom .faq-icon::before,
 body.mode-mom .faq-icon::after {
-    background: #8b7355;
+    background: #c4a898;
 }
 
-/* ========== MOM TYPOGRAPHY tweaks ========== */
+/* ========== MOM TYPOGRAPHY ========== */
 body.mode-mom h1 {
     color: #3a3028;
     font-family: 'Inter', -apple-system, sans-serif;
 }
-body.mode-mom .hero-subtitle { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; }
-body.mode-mom .logo { font-family: 'Cormorant Garamond', Georgia, serif; }
-body.mode-mom .section-header h2 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
-body.mode-mom .principle-card h3 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
-body.mode-mom .schedule-card h3 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
-body.mode-mom .value-card h3 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
-body.mode-mom .cta-card h2 { font-family: 'Cormorant Garamond', Georgia, serif; }
-body.mode-mom .story-emphasis {
-    color: #8b7355;
-    border-left-color: #c9a96e;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+body.mode-mom .hero-description {
+    color: #6b5d55;
+    font-weight: 400;
 }
-body.mode-mom .schedule-price { font-family: 'Cormorant Garamond', Georgia, serif; }
-body.mode-mom .highlight { color: #8b7355; }
-body.mode-mom .hero-description { font-family: 'Manrope', sans-serif; font-weight: 300; }
+body.mode-mom .section-header h2 { color: #3a3028; }
+body.mode-mom .principle-card h3 { color: #4a3f38; }
+body.mode-mom .schedule-card h3 { color: #4a3f38; }
+body.mode-mom .value-card h3 { color: #4a3f38; }
+body.mode-mom .cta-card h2 { color: white; }
+body.mode-mom .story-emphasis {
+    color: #a08272;
+    border-left-color: #d4b8a8;
+}
+body.mode-mom .story-text { color: #5a4e45; }
+body.mode-mom .story-text p { color: #5a4e45; }
+body.mode-mom .schedule-price { color: #a08272; }
+body.mode-mom .highlight { color: #b89585; }
+body.mode-mom .feature { color: #4a3f38; }
+body.mode-mom .feature i { color: #c4a898; }
+body.mode-mom .marker { color: #a09890; }
+body.mode-mom .principle-card p { color: #6b5d55; }
+body.mode-mom .value-card p { color: #8a7e76; }
+body.mode-mom .value-footer { color: #6b5d55; }
+body.mode-mom .faq-answer-inner { color: #6b5d55; }
+body.mode-mom .price-note { color: #a09890; }
 
 /* ========== MOM value icon ========== */
 body.mode-mom .value-icon {
-    background: rgba(139, 115, 85, 0.1);
+    background: rgba(184, 149, 133, 0.08);
 }
-body.mode-mom .value-icon i { color: #8b7355; }
+body.mode-mom .value-icon i { color: #c4a898; }
 
 /* ========== MOM RESPONSIVE ========== */
 @media (max-width: 768px) {
@@ -217,7 +245,7 @@ body.mode-mom .value-icon i { color: #8b7355; }
         background-attachment: scroll;
     }
     body.mode-mom .nav-menu.active .nav-list {
-        background: rgba(255, 252, 247, 0.95);
+        background: rgba(255, 253, 250, 0.95);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
     }
