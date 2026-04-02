@@ -205,24 +205,28 @@ body.mode-mom .faq-icon::after {
 /* ========== MOM TYPOGRAPHY ========== */
 body.mode-mom h1 {
     color: #3a3028;
-    font-family: 'Inter', -apple-system, sans-serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
 }
 body.mode-mom .hero-description {
     color: #6b5d55;
     font-weight: 400;
 }
-body.mode-mom .section-header h2 { color: #3a3028; }
-body.mode-mom .principle-card h3 { color: #4a3f38; }
-body.mode-mom .schedule-card h3 { color: #4a3f38; }
-body.mode-mom .value-card h3 { color: #4a3f38; }
-body.mode-mom .cta-card h2 { color: white; }
+body.mode-mom .section-header h2 { color: #3a3028; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; }
+body.mode-mom .principle-card h3 { color: #4a3f38; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .schedule-card h3 { color: #4a3f38; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .value-card h3 { color: #4a3f38; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .cta-card h2 { color: white; font-family: 'Cormorant Garamond', Georgia, serif; }
 body.mode-mom .story-emphasis {
     color: #a08272;
     border-left-color: #d4b8a8;
+    font-family: 'Cormorant Garamond', Georgia, serif;
 }
+body.mode-mom .schedule-price { color: #a08272; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .logo { font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom .practice-box h3 { font-family: 'Cormorant Garamond', Georgia, serif; }
 body.mode-mom .story-text { color: #5a4e45; }
 body.mode-mom .story-text p { color: #5a4e45; }
-body.mode-mom .schedule-price { color: #a08272; }
 body.mode-mom .highlight { color: #b89585; }
 body.mode-mom .feature { color: #4a3f38; }
 body.mode-mom .feature i { color: #c4a898; }
