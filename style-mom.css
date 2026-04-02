@@ -185,7 +185,14 @@ body.mode-mom .faq-icon::after {
 }
 
 /* ========== MOM TYPOGRAPHY tweaks ========== */
-body.mode-mom h1 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
+body.mode-mom h1 {
+    color: #3a3028;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
 body.mode-mom .hero-subtitle { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; }
 body.mode-mom .logo { font-family: 'Cormorant Garamond', Georgia, serif; }
 body.mode-mom .section-header h2 { color: #4a3f32; font-family: 'Cormorant Garamond', Georgia, serif; }
