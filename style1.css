@@ -705,11 +705,12 @@ footer {
     .footer-copyright { font-size: 0.78rem; }
 
     .mode-switcher {
-        top: 66px;
-        left: 16px;
-        padding: 4px;
+        top: 18px;
+        left: auto;
+        right: 60px;
+        padding: 3px;
     }
-    .mode-btn { padding: 8px 14px; font-size: 0.75rem; }
+    .mode-btn { padding: 6px 12px; font-size: 0.7rem; }
 }
 
 @media (max-width: 380px) {
