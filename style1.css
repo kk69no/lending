@@ -609,7 +609,7 @@ footer {
     /* Navbar */
     .navbar { padding: 14px 0; }
     .navbar.scrolled { padding: 10px 0; }
-    .logo { font-size: 1.8rem; }
+    .logo { font-size: 1.5rem; }
     .nav-list { display: none; }
     .nav-toggle { display: block; }
     .nav-menu.active .nav-list {
@@ -705,12 +705,9 @@ footer {
     .footer-copyright { font-size: 0.78rem; }
 
     .mode-switcher {
-        top: 18px;
-        left: auto;
-        right: 60px;
         padding: 3px;
     }
-    .mode-btn { padding: 6px 12px; font-size: 0.7rem; }
+    .mode-btn { padding: 6px 10px; font-size: 0.7rem; }
 }
 
 @media (max-width: 380px) {

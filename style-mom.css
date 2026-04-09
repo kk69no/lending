@@ -1,16 +1,11 @@
 /* ========== MODE SWITCHER ========== */
 .mode-switcher {
-    position: fixed;
-    top: 78px; left: 24px;
-    z-index: 999;
     display: flex; gap: 4px;
     background: rgba(255,255,255,0.92);
-    padding: 5px;
+    padding: 4px;
     border-radius: 50px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.06);
 }
 .mode-btn {
     padding: 9px 18px;
@@ -255,10 +250,5 @@ body.mode-mom .value-icon i { color: #c4a898; }
         background: rgba(255, 253, 250, 0.95);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-    }
-    body.mode-mom .mode-switcher {
-        top: 18px;
-        left: auto;
-        right: 60px;
     }
 }
